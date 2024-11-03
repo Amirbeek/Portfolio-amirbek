@@ -1,8 +1,15 @@
-export const theme = {
-    primary: '#007bff',
-    secondary: '#6c757d',
-    background: '#f8f9fa',
-    text: '#333',
-    heading: '#222',
-  };
-  
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+
+const theme = {
+  background: '#f8f9fa',  
+  primary: '#007bff',         
+  secondaryBackground: '#ffffff', 
+  heading: '#343a40',         
+  text: '#495057'             
+};
+
+export const ThemeProvider = ({ children }) => (
+  <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
+);
+
+export default theme;

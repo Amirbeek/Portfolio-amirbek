@@ -1,24 +1,25 @@
 import React from 'react';
-import GlobalStyle from './GlobalStyle';
+import Header from './sections/Header';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './Theme';
-
-// Import the components we'll create in later parts
-// import Header from './components/Header'; // Part 2
-// import About from './components/About';   // Part 3
-// import Skills from './components/Skills'; // Part 3
-// import Projects from './components/Projects'; // Part 4
-// import Contact from './components/Contact';   // Part 5
+import Theme from './Theme'; // Your theme definition
+import Footer from './sections/Footer';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      {/* <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact /> */}
+    <ThemeProvider theme={Theme}>
+      <div>
+        <Header />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer/>
+      </div>
     </ThemeProvider>
   );
 }
