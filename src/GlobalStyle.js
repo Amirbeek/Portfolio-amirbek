@@ -8,9 +8,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+      color: hsla(0,0%,100%,0.88);
+      font-family:PP Neue Machine, Inter, sans-serif;
   }
 `;
 

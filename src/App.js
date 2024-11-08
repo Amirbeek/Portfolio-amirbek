@@ -7,7 +7,7 @@ import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import { ThemeProvider } from 'styled-components';
 import Theme from './Theme'; // Your theme definition
-import Footer from './sections/Footer';
+// import Footer from './sections/Footer';
 
 function App() {
   return (
@@ -17,8 +17,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        <Contact />
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </ThemeProvider>
   );

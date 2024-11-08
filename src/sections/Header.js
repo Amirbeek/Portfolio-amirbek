@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const StyledNavbar = styled(Navbar)`
-  background-color: ${({ theme }) => theme.primary};
+  background-color: #0e0e0e;
   padding: 1rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
@@ -18,29 +18,30 @@ const NavItem = styled(Nav.Link)`
   color: white !important;
   font-weight: 500;
   transition: color 0.3s;
-
   &:hover {
-    color: #ffdd57 !important; // Accent color on hover
+    color: hsla(0, 0%, 100%, 0.88);
   }
+`;
+
+const Kome = styled.span`
+  color: #8862f8;
 `;
 
 function Header() {
   return (
     <StyledNavbar expand="lg" fixed="top">
-      <Container>
+
         <Navbar.Brand href="#home">
-          <Logo>Amirbek's Portfolio</Logo>
+          <Logo>AmirbekShom <Kome>_</Kome></Logo>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <NavItem href="#about">About</NavItem>
-            <NavItem href="#skills">Skills</NavItem>
-            <NavItem href="#projects">Projects</NavItem>
-            <NavItem href="#contact">Contact</NavItem>
+          <Nav className="ms-auto">
+            <NavItem href="../portfolio/my_portfolio.pdf" target="_blank" rel="noopener noreferrer">Resume</NavItem>
+            <NavItem href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">Github</NavItem>
+            <NavItem href="#projects">Contact</NavItem>
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </StyledNavbar>
   );
 }
