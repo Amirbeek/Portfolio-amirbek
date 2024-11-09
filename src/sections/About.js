@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import AnimatedSection from '../components/AnimatedSection';
-import theme from '../Theme'; // Your theme definition
+import { themes } from '../Theme'; // Import themes
 
 const AboutContainer = styled.div`
-    padding: 100px 100px; // Add top padding to account for fixed navbar
-    background-color: ${theme.background}; // Dark background for contrast
+    padding: 100px 100px;
+    background-color: ${props => props.theme.background}; // Correct usage
     text-align: left;
-    
 
     h1 {
-        color: hsla(0, 0%, 100%, 0.88);
+        color:${props => props.theme.text_color_header}; );
         line-height: 72px;
         margin-top: 18px;
         font-size: 60px;
@@ -31,7 +30,7 @@ const AboutContainer = styled.div`
 const FaceImg = styled.div`
     width: 100px;
     height: 100px;
-    background-color: ${theme.face_color};
+    background-color: ${props => props.theme.face_color}; // Correct usage
     border-radius: 50%;
     overflow: hidden;
     transition: background-color 0.3s ease;
@@ -43,13 +42,14 @@ const FaceImg = styled.div`
     }
 
     &:hover {
-        background-color: #555; // Hover effect
+        background-color: ${props => props.theme.face_color_hover}; // Hover effect
     }
 `;
 
 const FaceColor = styled.span`
-    color: ${theme.primary_color}!important;
-`
+    color: ${props => props.theme.primary_color} !important;
+`;
+
 const About = () => {
     const [currentText, setCurrentText] = useState("design");
 
@@ -59,7 +59,7 @@ const About = () => {
         const interval = setInterval(() => {
             setCurrentText(texts[index]);
             index = (index + 1) % texts.length;
-        }, 1200);
+        }, 1300);
 
         return () => clearInterval(interval);
     }, []);
