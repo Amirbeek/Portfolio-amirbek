@@ -21,9 +21,6 @@ const SectionWrapper = styled.div`
   justify-content: center;
 `;
 
-const Rows = styled.div`
-   
-`
 const AboutMe = styled.h1`
     color: ${props => props.theme.text_color_header};!important;);
     font-weight: bold;
