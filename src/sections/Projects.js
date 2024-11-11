@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
+import ProjectCard from '../components/ProjectCard';
 
 
 const Container = styled.div`
@@ -24,14 +25,9 @@ const Title = styled.h1`
 const Projects = () => {
 
   return (
-      <Container >
-          <Title className={'container'}>
-              Projects
-          </Title>
-          <div className="container">
-            
-          </div>
-      </Container>
+      <ProjectCard title={'Hello world'} description={'Amirbek '}>
+
+      </ProjectCard>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnimatedSection from '../components/AnimatedSection';
-import {Col, Image, Row} from "react-bootstrap"
+import {Col, Row} from "react-bootstrap"
 const Continer = styled.div`
     background-color: ${props => props.theme.background};
     padding: 2rem 0;
@@ -25,7 +24,7 @@ const AboutMe = styled.h1`
     color: ${props => props.theme.text_color_header};!important;);
     font-weight: bold;
 `
-const Style_p = styled.p`
+const Stylep = styled.p`
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
@@ -53,16 +52,16 @@ const BIO = () => {
               <Col md={6}>
                   <SectionWrapper>
                       <AboutMe>About Me</AboutMe>
-                      <Style_p>
+                      <Stylep>
                           My name is Amirbek Shomurodov, a software engineer with a passion for designing and building robust systems. I focus on creating scalable solutions that drive efficiency and improve user experiences.
-                      </Style_p>
-                      <Style_p>
+                      </Stylep>
+                      <Stylep>
                           In my second year at Brunel University, I led a team to develop an application called <GitHubLink href="https://github.com/RandomUser/Nutri-Book" target="_blank" rel="noopener noreferrer">Nutri-Book</GitHubLink> that enables users to share ingredients, promoting collaboration and efficiency. This experience strengthened my leadership and full-stack development skills.
 
-                      </Style_p>
-                      <Style_p>
+                      </Stylep>
+                      <Stylep>
                           I am currently pursuing a Bachelor's degree in Computer Science with a focus on Software Engineering, AI, and Data Science. I aim to contribute to the development of impactful software systems that address complex challenges.
-                      </Style_p>
+                      </Stylep>
                   </SectionWrapper>
 
               </Col>

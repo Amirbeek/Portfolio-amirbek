@@ -6,7 +6,7 @@ const darkTheme = {
   heading: '#343a40',
   text: '#495057',
   face_color: '#2d2d2d',
-  text_color_header: '#fff', // Corrected the text color for header
+  text_color_header: '#fff',
   face_color_hover: '#f2994a',
   primary_color: '#8862f8',
   skill_color: '#2d2d2d',

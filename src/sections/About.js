@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import AnimatedSection from '../components/AnimatedSection';
-import { themes } from '../Theme'; // Import themes
 
 const AboutContainer = styled.div`
     padding: 100px 100px;
-    background-color: ${props => props.theme.background}; // Correct usage
+    background-color: ${props => props.theme.background}; 
     text-align: left;
 
     h1 {

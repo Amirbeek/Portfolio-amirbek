@@ -5,17 +5,27 @@ import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './Theme';  // Assuming ThemeProvider is in Theme.js
 import { themes } from './Theme';
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        background-color: ${props => props.theme.secondaryBackground};
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease;
+    }
+`;
+
+const Container = styled.div`
+    min-height: 100vh;
+`;
 
 function App() {
-    const [theme, setTheme] = useState(themes.darkTheme);
+    const [theme, setTheme] = useState(localStorage.getItem('theme') === 'light' ? themes.lightTheme : themes.darkTheme);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            setTheme(themes.lightTheme);
-        } else {
-            setTheme(themes.darkTheme);
-        }
+        setTheme(savedTheme === 'light' ? themes.lightTheme : themes.darkTheme);
     }, []);
 
     const toggleTheme = () => {
@@ -25,14 +35,17 @@ function App() {
     };
 
     return (
-        <ThemeProvider theme={theme}> {/* Wrap the entire app in ThemeProvider */}
-            <Router>
-                <Header toggleTheme={toggleTheme} theme={theme} />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                </Routes>
-            </Router>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Container>
+                <Router>
+                    <Header toggleTheme={toggleTheme} theme={localStorage.getItem('theme') || 'dark'} /> {/* Pass the theme name */}
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                </Router>
+            </Container>
         </ThemeProvider>
     );
 }

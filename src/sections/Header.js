@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Navbar, Nav } from 'react-bootstrap';
-import { FaSun, FaMoon } from 'react-icons/fa'; // Import icons for sun and moon
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const StyledNavbar = styled(Navbar)`
     background-color: ${props => props.theme.background};
@@ -50,20 +50,20 @@ const Fomo = styled.span`
 
 function Header({ toggleTheme, theme }) {
     return (
-        <StyledNavbar theme={theme} expand="lg">
+        <StyledNavbar expand="lg">
             <Navbar.Brand href="/">
-                <Logo theme={theme}>AmirbekShom <Fomo>_</Fomo></Logo>
+                <Logo>AmirbekShom <Fomo>_</Fomo></Logo>
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                    <NavItem theme={theme} href="../portfolio/my_portfolio.pdf" target="_blank" rel="noopener noreferrer">
+                    <NavItem href="../portfolio/my_portfolio.pdf" target="_blank" rel="noopener noreferrer">
                         Resume
                     </NavItem>
-                    <NavItem theme={theme} href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">
+                    <NavItem href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">
                         Github
                     </NavItem>
-                    <NavItem theme={theme} href="/contact">
+                    <NavItem href="/contact">
                         Contact
                     </NavItem>
                 </Nav>
