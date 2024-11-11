@@ -10,7 +10,7 @@ const CardContainer = styled.div`
   transition: transform 0.3s;
 
   &:hover {
-    transform: translateY(-5px); // Slight lift effect on hover
+    transform: translateY(-5px);
   }
 `;
 
