@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/amirbekshomurodov.github.io/static/css/main.86c20a97.css",
-    "main.js": "/amirbekshomurodov.github.io/static/js/main.47d07687.js",
-    "static/media/2024-11-08 14.21.23.jpg": "/amirbekshomurodov.github.io/static/media/2024-11-08 14.21.23.6b925703fdee487d930e.jpg",
-    "static/media/avatar.png": "/amirbekshomurodov.github.io/static/media/avatar.7ce02f7f63308213af83.png",
-    "index.html": "/amirbekshomurodov.github.io/index.html",
-    "main.86c20a97.css.map": "/amirbekshomurodov.github.io/static/css/main.86c20a97.css.map",
-    "main.47d07687.js.map": "/amirbekshomurodov.github.io/static/js/main.47d07687.js.map"
+    "main.css": "/static/css/main.86c20a97.css",
+    "main.js": "/static/js/main.df0752e8.js",
+    "static/media/2024-11-08 14.21.23.jpg": "/static/media/2024-11-08 14.21.23.6b925703fdee487d930e.jpg",
+    "static/media/avatar.png": "/static/media/avatar.7ce02f7f63308213af83.png",
+    "index.html": "/index.html",
+    "main.86c20a97.css.map": "/static/css/main.86c20a97.css.map",
+    "main.df0752e8.js.map": "/static/js/main.df0752e8.js.map"
   },
   "entrypoints": [
     "static/css/main.86c20a97.css",
-    "static/js/main.47d07687.js"
+    "static/js/main.df0752e8.js"
   ]
 }
