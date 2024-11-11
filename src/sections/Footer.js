@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaTwitter, FaArrowUp } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
-  background-color: #282c34;
+  background-color: ${props => props.theme.background};
   color: white;
   text-align: center;
   padding: 2rem 1rem;
@@ -17,12 +17,12 @@ const SocialLinks = styled.div`
   margin-bottom: 1rem;
 
   a {
-    color: #ffdd57;
+    color: ${props => props.theme.primary_color};
     font-size: 1.5rem;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #ffc107; // Slightly brighter shade on hover
+      color: ${props => props.theme.face_color_hover};
     }
   }
 `;
@@ -33,25 +33,25 @@ const Copyright = styled.p`
 `;
 
 const ScrollToTopButton = styled.button`
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: #ffdd57;
-  border: none;
-  border-radius: 50%;
-  padding: 0.6rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: ${props => props.theme.face_color_hover};
+    border: none;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
 
-  &:hover {
-    background-color: #ffc107;
-  }
+    &:hover {
+        background-color: #ffc107;
+    }
 
-  svg {
-    color: #282c34;
-    font-size: 1.2rem;
-  }
+    svg {
+        color: ${props => props.theme.text_color_header};
+        font-size: 1.2rem;
+    }
 `;
 
 const Footer = () => {

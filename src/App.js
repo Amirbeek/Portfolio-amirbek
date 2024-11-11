@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './Theme';  // Assuming ThemeProvider is in Theme.js
 import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
+import Footer from "./sections/Footer";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -44,6 +45,7 @@ function App() {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/contact" element={<ContactPage />} />
                     </Routes>
+                    <Footer/>
                 </Router>
             </Container>
         </ThemeProvider>
