@@ -18,6 +18,10 @@ const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+    @media (min-width: 768px) {
+       padding: 1rem!important;
+    }
 `;
 
 const AboutMe = styled.h1`
