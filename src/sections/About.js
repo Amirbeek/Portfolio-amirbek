@@ -24,6 +24,18 @@ const AboutContainer = styled.div`
         line-height: 1.6;
         font-weight: 700;
     }
+    @media (max-width: 768px) {
+        padding: 40px 20px; /* Reduced padding on smaller screens */
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
 `;
 
 const FaceImg = styled.div`
