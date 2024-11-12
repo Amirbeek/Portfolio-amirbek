@@ -5,57 +5,68 @@ import Title from "../components/Title";
 
 const Container = styled.div`
     background-color: ${props => props.theme.background};
-    padding: 2rem 0;
+    padding: 1.5rem 1rem;
 
     div {
         background-color: ${props => props.theme.skill_color};
         border-radius: 30px;
-        min-height: 420px;
-        padding: 2rem;
+        min-height: 400px;
+        padding: 1.5rem;
+        @media (min-width: 768px) {
+            padding: 2rem;
+        }
     }
 `;
 
 const StyledTitle = styled.h1`
-  color: ${props => props.theme.text_color_header};
-  font-weight: bold;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  @media (min-width: 768px) {
-    font-size: 3.5rem;
-  }
+    color: ${props => props.theme.text_color_header};
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    @media (min-width: 768px) {
+        font-size: 3rem;
+    }
 `;
 
 const Images = styled.div`
-  background-image: url("https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 400px;
-  border-radius: 8px;
-    transition: 0.5s;
-  &:hover {
-    transform: scale(1.05);
-  }
+    background-image: url("https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    &:hover {
+        transform: scale(1.05);
+    }
+    @media (min-width: 768px) {
+        height: 400px;
+    }
 `;
 
 const ProjectCard = styled.div`
     background-color: ${props => props.theme.face_color};
     border-radius: 30px;
-    padding: 2rem;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     @media (min-width: 768px) {
         flex-direction: row;
+        padding: 2rem;
+        gap: 1.5rem;
     }
 `;
 
 const ProjectDescription = styled.div`
     color: ${props => props.theme.text_color_header};
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    @media (min-width: 768px) {
+        font-size: 1.1rem;
+    }
 `;
 
 const Projects = () => {
@@ -64,7 +75,7 @@ const Projects = () => {
             <Title title="Project" />
             <Container className="container">
                 <ProjectCard>
-                    <ProjectDescription className="col-md-12 col-lg-5">
+                    <ProjectDescription className="col-12 col-md-6">
                         <h2>TinyDesk</h2>
                         <p>
                             TinyDesk is a web application that lets users manage bookmarks and boost their productivity with handy widgets.
@@ -76,12 +87,11 @@ const Projects = () => {
                         </p>
                     </ProjectDescription>
 
-                    <div className="col-md-12 col-lg-7 p-3">
+                    <div className="col-12 col-md-6 p-3">
                         <Images />
                     </div>
                 </ProjectCard>
             </Container>
-
         </div>
     );
 };

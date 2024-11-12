@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Col, Row} from "react-bootstrap"
-const Continer = styled.div`
+const Container = styled.div`
     background-color: ${props => props.theme.background};
     padding: 2rem 0;
     div{
@@ -46,31 +46,42 @@ const GitHubLink = styled.a`
 `;
 const BIO = () => {
   return (
-    <Continer className={''}>
-      <div className="container">
-          <Row className={'p-5'}>
-              <Col md={6}>
-                  <SectionWrapper>
-                      <AboutMe>About Me</AboutMe>
-                      <Stylep>
-                          My name is Amirbek Shomurodov, a software engineer with a passion for designing and building robust systems. I focus on creating scalable solutions that drive efficiency and improve user experiences.
-                      </Stylep>
-                      <Stylep>
-                          In my second year at Brunel University, I led a team to develop an application called <GitHubLink href="https://github.com/RandomUser/Nutri-Book" target="_blank" rel="noopener noreferrer">Nutri-Book</GitHubLink> that enables users to share ingredients, promoting collaboration and efficiency. This experience strengthened my leadership and full-stack development skills.
+      <Container className="">
+          <div className="container">
+              <div className="p-5 d-flex flex-wrap">
+                  <div className="col-12 col-md-6 p-3">
+                      <SectionWrapper>
+                          <AboutMe>About Me</AboutMe>
+                          <Stylep>
+                              I'm Amirbek Shomurodov, a software engineer dedicated to building scalable, efficient systems.
+                          </Stylep>
+                          <Stylep>
+                              At Brunel University, I led a team to create{' '}
+                              <GitHubLink
+                                  href="https://github.com/RandomUser/Nutri-Book"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                              >
+                                  Nutri-Book
+                              </GitHubLink>
+                              , an app for sharing ingredients, which enhanced my leadership and development skills.
+                          </Stylep>
+                          <Stylep>
+                              Currently studying Computer Science, I aim to solve complex challenges through impactful software.
+                          </Stylep>
+                      </SectionWrapper>
+                  </div>
 
-                      </Stylep>
-                      <Stylep>
-                          I am currently pursuing a Bachelor's degree in Computer Science with a focus on Software Engineering, AI, and Data Science. I aim to contribute to the development of impactful software systems that address complex challenges.
-                      </Stylep>
-                  </SectionWrapper>
+                  <div className="col-12 col-md-6 p-3">
+                      <ImageBIO
+                          src={require('../images/2024-11-08 14.21.23.jpg')}
+                          alt="Amirbek's picture"
+                      />
+                  </div>
+              </div>
+          </div>
+      </Container>
 
-              </Col>
-              <Col md={6}>
-                  <ImageBIO src={require('../images/2024-11-08 14.21.23.jpg')} alt="Amirbek's picture" />
-              </Col>
-          </Row>
-      </div>
-    </Continer>
   );
 };
 
