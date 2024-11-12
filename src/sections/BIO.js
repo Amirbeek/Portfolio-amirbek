@@ -18,10 +18,6 @@ const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-    @media (min-width: 768px) {
-       padding: 1rem!important;
-    }
 `;
 
 const AboutMe = styled.h1`
@@ -52,7 +48,7 @@ const BIO = () => {
   return (
       <Container className="">
           <div className="container">
-              <div className="p-5 d-flex flex-wrap">
+              <div className="p-0 p-md-5 d-flex flex-wrap">
                   <div className="col-12 col-md-6 p-3">
                       <SectionWrapper>
                           <AboutMe>About Me</AboutMe>
