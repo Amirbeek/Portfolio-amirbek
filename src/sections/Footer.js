@@ -49,7 +49,7 @@ const ScrollToTopButton = styled.button`
     }
 
     svg {
-        color: ${props => props.theme.text_color_header};
+        color: #f1f1f1;
         font-size: 1.2rem;
     }
 `;

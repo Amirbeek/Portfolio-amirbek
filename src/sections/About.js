@@ -76,7 +76,7 @@ const About = () => {
     }, []);
 
     return (
-        <AnimatedSection id="about">
+        <AnimatedSection id="about" className={'container'}>
             <AboutContainer>
                 <FaceImg>
                     <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
