@@ -1,8 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 const Wrapper = styled.div`
-    height: 484px;
+    min-height: 484px;
     
     div{
         background-color: ${props => props.theme.face_color};
@@ -19,9 +25,7 @@ const Wrapper = styled.div`
     }
 `
 const RowWrapper = styled.div`
-    //position: relative;
-    //
-    
+
 `
 
 const Images = styled.img`
@@ -55,17 +59,33 @@ const StyleDesc = styled.p`
         color: ${props => props.theme.face_color_hover};
     }
 `;
-
+const Icons =  styled(IconButton)`
+    
+    font-size: 1.25rem;
+    .MuiSvgIcon-root{
+        color: ${props => props.theme.text_color_header};
+    }
+    
+`
 const ProCard = ({ title, description, image, repoLink }) => {
     return (
-        <RowWrapper className="row">
+        <RowWrapper className="row p-0">
             <Wrapper className="col-12 col-md-6">
                 <div className="j p p-5">
-                    <StyledTitle className="card-title">{title}</StyledTitle>
+                    <StyledTitle className="">{title}</StyledTitle>
                     <StyleDesc
-                        className="card-text"
-                        dangerouslySetInnerHTML={{ __html: description }}
+                        className=""
+                        dangerouslySetInnerHTML={{__html: description}}
                     />
+                    <IconButton href="#" aria-label="GitHub">
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton href="#" aria-label="OutLineIcon">
+                        <LanguageOutlinedIcon/>
+                    </IconButton>
+                    <IconButton href="#" aria-label="NewWindowIcon">
+                        <OpenInNewOutlinedIcon/>
+                    </IconButton>
                 </div>
             </Wrapper>
             <Wrapper className="col-12 col-md-6">

@@ -9,7 +9,6 @@ function HomePage() {
             <About />
             <BIO />
             <Projects />
-            {/*<h1>Skils</h1>*/}
         </div>
     );
 }
