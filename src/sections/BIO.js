@@ -32,9 +32,11 @@ const Stylep = styled.p`
 `
 const ImageBIO = styled.img`
     width: 100%;
-    height: 100%;
+    max-height: 500px;
     border-radius: 30px;
-`
+    object-fit: cover;
+`;
+
 const GitHubLink = styled.a`
     color: #8862f8;
     text-decoration: none;

@@ -7,6 +7,7 @@ import { ThemeProvider } from './Theme';  // Assuming ThemeProvider is in Theme.
 import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./sections/Footer";
+import Blog from "./pages/Blog";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -43,6 +44,7 @@ function App() {
                     <Header toggleTheme={toggleTheme} theme={localStorage.getItem('theme') || 'dark'} /> {/* Pass the theme name */}
                     <Routes>
                         <Route path="/" element={<HomePage />} />
+                        <Route path="/blog" element={<Blog />} />
                         <Route path="/contact" element={<ContactPage />} />
                     </Routes>
                     <Footer/>

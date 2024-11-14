@@ -60,7 +60,7 @@ const Footer = () => {
   };
 
   return (
-    <FooterContainer>
+    <FooterContainer className={'align-items-end'}>
       <SocialLinks>
         <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
           <FaGithub />

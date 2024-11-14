@@ -57,6 +57,9 @@ function Header({ toggleTheme, theme }) {
             <Navbar.Toggle />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
+                    <NavItem href="/blog">
+                        Blog
+                    </NavItem>
                     <NavItem href="../portfolio/my_portfolio.pdf" target="_blank" rel="noopener noreferrer">
                         Resume
                     </NavItem>

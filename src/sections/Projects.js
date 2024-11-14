@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 import Title from "../components/Title";
 import ProCard from "../components/ProCard";
+import IconLinks from "../components/IconLinks";
 
 const Container = styled.div`
     background-color: ${props => props.theme.background};
-    padding: 1.5rem 1rem;
+    //padding: 1.5rem 1rem;
+    padding: 0!important;
 
     div {
         background-color: ${props => props.theme.skill_color};
@@ -80,6 +82,11 @@ const Projects = () => {
                                 I was mainly responsible for system architecture and user interface design.
                                 It was built with GatsbyJS & Material UI and deployed to Heroku.
                             </p>
+                            <IconLinks
+                                GitHubLink={"https://github.com"}
+                                DomainLink={"https://uzbegim.co.uk"}
+                                repoLink={'https://amirbeek.github.io'}
+                            />
                         </ProjectDescription>
                         <div className="col-12 col-md-6 p-3">
                             <Images/>
@@ -92,7 +99,9 @@ const Projects = () => {
                     I decided to recreate it with <span>ThreeJS</span> and make the project open-source. I built the Globe using Vasco Asturiano's three-globe as a base, shaded the 3D scene to resemble a dreamy space environment, and bundled everything with <span>Webpack</span>. <br><br>
                     Additionally, the Globe visualizes my flight history across the world from 2019 to 2020. So far, this is my most popular open-source project, with 95+ stars on Github.`}
                     image={'https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png'}
-                    repoLink={'https://github.com/Amirbeek/AI-Powered-COVID-19-Detection-from-Chest-X-rays-Using-Deep-Learning-and-Django'}
+                    GitHubLink={"https://github.com"}
+                    DomainLink={"https://uzbegim.co.uk"}
+                    repoLink={'https://amirbeek.github.io'}
                 />
             </div>
 
