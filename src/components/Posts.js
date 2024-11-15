@@ -8,19 +8,29 @@ function Posts() {
     return (
         <div className="container mt-5">
             <div className="row">
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-4">
                     <Cards image={'https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png'}
                            title={'My research project for CSE 487 at SUNY Korea'}
                            date={'February 01, 2021'}
                            ProjectType={'Development'}
-                           Url={'https//:github.com'}/
+                           Url={'https//:github.com'}
                     />
                 </div>
-                <div className="col-12 col-md-3">
-                    col
+                <div className="col-12 col-md-4">
+                    <Cards image={'https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png'}
+                           title={'My research project for CSE 487 at SUNY Korea'}
+                           date={'February 01, 2021'}
+                           ProjectType={'Development'}
+                           Url={'https//:github.com'}
+                    />
                 </div>
-                <div className="col-12 col-md-3">
-                    col
+                <div className="col-12 col-md-4">
+                    <Cards image={'https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png'}
+                           title={'My research project for CSE 487 at SUNY Korea'}
+                           date={'February 01, 2021'}
+                           ProjectType={'Development'}
+                           Url={'https//:github.com'}
+                    />
                 </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ const Card_p = styled.div`
 // Card component
 function Cards({ image, title, date, ProjectType, Url }) {
     return (
-        <FunCard style={{ width: '18rem', marginBottom: '20px', borderRadius: '15px', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
+        <FunCard style={{  marginBottom: '20px', borderRadius: '15px', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
             <a href={Url} target="_blank" rel="noopener noreferrer">
                 <Card.Img variant="top" src={image} style={{ borderRadius: '15px 15px 0 0', objectFit: 'cover', height: '180px' }} />
             </a>
