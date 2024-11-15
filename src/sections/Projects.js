@@ -66,7 +66,7 @@ const ProjectDescription = styled.div`
 const Projects = () => {
     return (
         <div>
-            <Title title="Project"/>
+            <Title title="Project_Page"/>
             <div className="container">
                 <Container>
                     <ProjectCard>
@@ -86,6 +86,14 @@ const Projects = () => {
                                 GitHubLink={"https://github.com"}
                                 DomainLink={"https://uzbegim.co.uk"}
                                 repoLink={'https://amirbeek.github.io'}
+                                PagePath={'/project'}
+
+
+                                Project_Title={"TinyDesk"}
+                                Project_type={"Web Application"}
+                                Project_date={"January 2024"}
+                                pro_1={"Feature Highlight"}
+                                pro_1_text={"This is an amazing web application I built using React and Styled Components. It features responsive design, interactive elements, and a sleek modern UI."}
                             />
                         </ProjectDescription>
                         <div className="col-12 col-md-6 p-3">
@@ -102,6 +110,14 @@ const Projects = () => {
                     GitHubLink={"https://github.com"}
                     DomainLink={"https://uzbegim.co.uk"}
                     repoLink={'https://amirbeek.github.io'}
+                    PagePath={'/project'}
+
+
+                    Project_Title={"APP"}
+                    Project_type={"Web Application"}
+                    Project_date={"January 2024"}
+                    pro_1={"Feature Highlight"}
+                    pro_1_text={"This is an amazing web application I built using React and Styled Components. It features responsive design, interactive elements, and a sleek modern UI."}
                 />
             </div>
 

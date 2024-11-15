@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import IconLinks from "./IconLinks";
+import IconLinks from './IconLinks';
+
 const Wrapper = styled.div`
     min-height: 484px;
-    
     div{
         background-color: ${props => props.theme.face_color};
         height: 100%;
@@ -28,15 +22,15 @@ const Wrapper = styled.div`
             color: ${props => props.theme.text_color_header};
         }
     }
-`
+`;
+
 const RowWrapper = styled.div`
     .col-md-6{
         @media (min-width: 960px) {
             padding-right: 0!important;
         }
     }
-
-`
+`;
 
 const Images = styled.img`
     background-size: cover;
@@ -47,42 +41,42 @@ const Images = styled.img`
     &:hover {
         transform: scale(1.01);
     }
-
 `;
+
 const StyledTitle = styled.h2`
     color: ${props => props.theme.text_color_header};
     font-weight: 600;
-    
 `;
+
 const StyleDesc = styled.p`
     color: ${props => props.theme.text_color_header};
     a {
         color: ${props => props.theme.primary_color};
         text-decoration: none;
-
         &:hover {
             text-decoration: underline;
         }
     }
- 
 `;
-const Icons =  styled(IconButton)`
-    font-size: 1.25rem;
-    .MuiSvgIcon-root{
-        color: ${props => props.theme.text_color_header};
-    }
-    
-`
-const ProCard = ({ title, description, image, repoLink, GitHubLink, DomainLink, GitHubDomain }) => {
+
+const ProCard = ({ title, description, image, repoLink, GitHubLink, DomainLink, PagePath, Project_Title, Project_type, Project_date, pro_1, pro_1_text }) => {
     return (
         <RowWrapper className="row p-0 mr-0">
             <Wrapper className="col-12 col-md-6">
                 <div className="j p p-5 icons">
                     <StyledTitle className="">{title}</StyledTitle>
-                    <StyleDesc
-                        dangerouslySetInnerHTML={{ __html: description }}
+                    <StyleDesc dangerouslySetInnerHTML={{ __html: description }} />
+                    <IconLinks
+                        repoLink={repoLink}
+                        DomainLink={DomainLink}
+                        GitHubLink={GitHubLink}
+                        PagePath={PagePath}
+                        Project_Title={Project_Title}
+                        Project_type={Project_type}
+                        Project_date={Project_date}
+                        pro_1={pro_1}
+                        pro_1_text={pro_1_text}
                     />
-                    <IconLinks repoLink={repoLink} DomainLink={DomainLink} GitHubDomain={GitHubDomain} GitHubLink={GitHubLink}/>
                 </div>
             </Wrapper>
             <Wrapper className="col-12 col-md-6">

@@ -8,6 +8,7 @@ import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
+import Project_Page from "./pages/Project_Page";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -36,16 +37,29 @@ function App() {
         localStorage.setItem('theme', newTheme === themes.darkTheme ? 'dark' : 'light');
     };
 
+    const [projectData, setProjectData] = useState(null);
+
+    useEffect(() => {
+        const storedProject = localStorage.getItem('project');
+        if (storedProject) {
+            const parsedProject = JSON.parse(storedProject);
+            console.log("Parsed project:", parsedProject);
+            setProjectData(parsedProject);
+        }
+    }, []);
+
+
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Container>
                 <Router>
-                    <Header toggleTheme={toggleTheme} theme={localStorage.getItem('theme') || 'dark'} /> {/* Pass the theme name */}
+                    <Header toggleTheme={toggleTheme} theme={localStorage.getItem('theme') || 'dark'} />
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path='/project' element={<Project_Page projectData={projectData} />} />
                     </Routes>
                     <Footer/>
                 </Router>
