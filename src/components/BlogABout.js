@@ -21,19 +21,22 @@ const ImageBIO = styled.img`
 function BlogAbout() {
     return (
         <div className="container mt-5">
-            <div className="row align-items-center">
-                <div className="col-12 col-md-8 order-2 order-md-1 p-5 ">
-                    <Blog_text>Amirbek Shomurodov | Personal Blog</Blog_text>
-                    <Blog_p>
-                        Welcome to my personal blog. Here I share my stories and ideas with the world. I am very passionate about programming and design. Currently, I am a Computer Science student at Stony Brook University.
-                    </Blog_p>
-                </div>
-                <div className="col-12 col-md-4 order-1 order-md-2 d-flex justify-content-center">
+            <div className="row align-items-center flex-lg-row-reverse">
+                <div className="col-12 col-md-4  order-md-2 d-flex justify-content-center">
                     <ImageBIO
                         src={require('../images/hello.jpeg')}
                         alt="Amirbek's picture"
                     />
                 </div>
+                <div className="col-12 col-md-8  order-md-1 p-5 ">
+                    <Blog_text>Amirbek Shomurodov | Personal Blog</Blog_text>
+                    <Blog_p>
+                        Welcome to my personal blog. Here I share my stories and ideas with the world. I am very
+                        passionate about programming and design. Currently, I am a Computer Science student at Stony
+                        Brook University.
+                    </Blog_p>
+                </div>
+
             </div>
         </div>
     );
