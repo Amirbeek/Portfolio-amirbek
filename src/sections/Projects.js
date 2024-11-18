@@ -89,8 +89,8 @@ const Projects = () => {
                                 PagePath={'/project'}
 
 
-                                Project_Title={"TinyDesk"}
-                                Project_type={"Web Application"}
+                                Project_Title={"Data visualization on a globe, inspired by Github's homepage"}
+                                Project_type={"DEVELOPMENT"}
                                 Project_date={"January 2024"}
                                 pro_1={"Feature Highlight"}
                                 pro_1_text={"This is an amazing web application I built using React and Styled Components. It features responsive design, interactive elements, and a sleek modern UI."}
