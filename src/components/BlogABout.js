@@ -20,7 +20,7 @@ const ImageBIO = styled.img`
 `
 function BlogAbout() {
     return (
-        <div className="container mt-5">
+        <div className="container">
             <div className="row align-items-center flex-lg-row-reverse">
                 <div className="col-12 col-md-4  order-md-2 d-flex justify-content-center">
                     <ImageBIO
