@@ -12,15 +12,16 @@ const Wrapper = styled.footer`
     }
 `;
 
-const IconLinks = ({ repoLink, GitHubLink, DomainLink, PagePath, Project_Title, Project_type, Project_date, pro_1, pro_1_text }) => {
+const IconLinks = ({ repoLink, GitHubLink, DomainLink, PagePath, Project_Title,Project_image, Project_type, Project_date, Pro_Highlight, Pro_Desc }) => {
     const handleClick = () => {
         localStorage.removeItem('project')
         localStorage.setItem('project', JSON.stringify({
             Project_Title,
             Project_type,
             Project_date,
-            pro_1,
-            pro_1_text
+            Pro_Highlight,
+            Pro_Desc,
+            Project_image
         }));
 
     };

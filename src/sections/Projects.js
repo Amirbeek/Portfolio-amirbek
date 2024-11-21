@@ -92,8 +92,10 @@ const Projects = () => {
                                 Project_Title={"Data visualization on a globe, inspired by Github's homepage"}
                                 Project_type={"DEVELOPMENT"}
                                 Project_date={"January 2024"}
-                                pro_1={"Feature Highlight"}
-                                pro_1_text={"This is an amazing web application I built using React and Styled Components. It features responsive design, interactive elements, and a sleek modern UI."}
+                                Project_image={'https://janarosmonaliev.com/assets/github-home.png'}
+                                Pro_Highlight={"Feature Highlight"}
+                                Pro_Desc={
+                                    "If you visited <a href='http://gooogle.com' >Github's homepage</a> recently, you probably seen their new, re-designed landing page. It is incredibly well-made. One thing that stands out is the globe, where they display recent pull request activity on Github. It is fascinating to see 3D becoming more and more popular in web design."}
                             />
                         </ProjectDescription>
                         <div className="col-12 col-md-6 p-3">
@@ -108,6 +110,8 @@ const Projects = () => {
                     Additionally, the Globe visualizes my flight history across the world from 2019 to 2020. So far, this is my most popular open-source project, with 95+ stars on Github.`}
                     image={'https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png'}
                     GitHubLink={"https://github.com"}
+                    Project_image1={''}
+
                     DomainLink={"https://uzbegim.co.uk"}
                     repoLink={'https://amirbeek.github.io'}
                     PagePath={'/project'}
@@ -117,7 +121,8 @@ const Projects = () => {
                     Project_type={"Web Application"}
                     Project_date={"January 2024"}
                     pro_1={"Feature Highlight"}
-                    pro_1_text={"This is an amazing web application I built using React and Styled Components. It features responsive design, interactive elements, and a sleek modern UI."}
+                    pro_1_text={"" +
+                        "If you visited <a href='http://gooogle.com' >Github's homepage</a> recently, you probably seen their new, re-designed landing page. It is incredibly well-made. One thing that stands out is the globe, where they display recent pull request activity on Github. It is fascinating to see 3D becoming more and more popular in web design."}
                 />
             </div>
 
