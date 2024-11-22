@@ -7,7 +7,6 @@ import IconLinks from "../components/IconLinks";
 
 const Container = styled.div`
     background-color: ${props => props.theme.background};
-    //padding: 1.5rem 1rem;
     padding: 0!important;
 
     div {
