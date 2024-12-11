@@ -53,7 +53,7 @@ const Project_Page = ({ projectData }) => {
 
     }, [projectData]);
     console.log('PROJECTDATA: ' + JSON.stringify(projectData));
-    const { Project_Title, Project_type, Project_date, Pro_Highlight, Pro_Desc ,Project_image } = projectData || {};
+    const { Project_Title, Project_type, Project_date, Pro_Highlight, Pro_Desc ,Project_image,Project_image1 } = projectData || {};
 
     return (
         <div className="container my-5">
