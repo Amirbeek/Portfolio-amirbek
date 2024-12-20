@@ -58,31 +58,26 @@ const StyleDesc = styled.p`
         }
     }
 `;
-
-const ProCard = ({ title, description, image, repoLink, GitHubLink, DomainLink, PagePath, Project_Title, Project_type, Project_date, pro_1, pro_1_text }) => {
+const ProCard = ({
+                     title,
+                     description,
+                     image,
+                     repoLink,
+                     ...props
+                 }) => {
     return (
-        <RowWrapper className="row p-0 mr-0">
+        <RowWrapper className="row p-0 mt-5">
             <Wrapper className="col-12 col-md-6">
                 <div className="j p p-5 icons">
-                    <StyledTitle className="">{title}</StyledTitle>
+                    <StyledTitle>{title}</StyledTitle>
                     <StyleDesc dangerouslySetInnerHTML={{ __html: description }} />
-                    <IconLinks
-                        repoLink={repoLink}
-                        DomainLink={DomainLink}
-                        GitHubLink={GitHubLink}
-                        PagePath={PagePath}
-                        Project_Title={Project_Title}
-                        Project_type={Project_type}
-                        Project_date={Project_date}
-                        pro_1={pro_1}
-                        pro_1_text={pro_1_text}
-                    />
+                    <IconLinks {...props} />
                 </div>
             </Wrapper>
             <Wrapper className="col-12 col-md-6">
                 <div className="j k">
                     <a href={repoLink} target="_blank" rel="noopener noreferrer">
-                        <Images src={image} className="k" alt={`${title} preview`} />
+                        <Images src={image} alt={`${title} preview`} />
                     </a>
                 </div>
             </Wrapper>

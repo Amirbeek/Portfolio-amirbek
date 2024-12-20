@@ -61,7 +61,6 @@ const Project_Page = ({ projectData }) => {
             <Date>{Project_type || 'No project type'}</Date>
             <div className="d-grid gap-2 d-flex my-4">
                 <FaceImage src={require('../images/hello.jpeg')} alt="Amirbek's picture" />
-
                 <div className="align-items-center">
                     <Ip>Amirbek Shomurodov</Ip>
                     <SpanColor>{Project_date || 'No project date'}</SpanColor>

@@ -8,46 +8,34 @@ import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 
 const Wrapper = styled.footer`
     svg {
-        color: ${props => props.theme.text_color_header};
+        color: ${(props) => props.theme.text_color_header};
     }
 `;
 
-const IconLinks = ({ repoLink, GitHubLink, DomainLink, PagePath, Project_Title,Project_image, Project_type, Project_date, Pro_Highlight, Pro_Desc }) => {
+const IconLinks = ({ links }) => {
     const handleClick = () => {
-        localStorage.removeItem('project')
-        localStorage.setItem('project', JSON.stringify({
-            Project_Title,
-            Project_type,
-            Project_date,
-            Pro_Highlight,
-            Pro_Desc,
-            Project_image
-        }));
-
+        localStorage.setItem('project', JSON.stringify(links));
     };
 
     return (
         <Wrapper>
-            {GitHubLink && (
-                <IconButton href={GitHubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            {links.GitHubLink && (
+                <IconButton href={links.GitHubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <GitHubIcon />
                 </IconButton>
             )}
-            {DomainLink && (
-                <IconButton href={DomainLink} target="_blank" rel="noopener noreferrer" aria-label="OutLineIcon">
+            {links.DomainLink && (
+                <IconButton href={links.DomainLink} target="_blank" rel="noopener noreferrer" aria-label="Website">
                     <LanguageOutlinedIcon />
                 </IconButton>
             )}
-            {PagePath && (
-                <IconButton
-                    href={PagePath}
-                    aria-label="PageLink"
-                    onClick={handleClick}>
+            {links.PagePath && (
+                <IconButton href={links.PagePath} aria-label="Project Page" onClick={handleClick}>
                     <MenuBookOutlinedIcon />
                 </IconButton>
             )}
-            {repoLink && (
-                <IconButton href={repoLink} target="_blank" rel="noopener noreferrer" aria-label="OpenInNewOutlinedIcon">
+            {links.repoLink && (
+                <IconButton href={links.repoLink} target="_blank" rel="noopener noreferrer" aria-label="Repository">
                     <OpenInNewOutlinedIcon />
                 </IconButton>
             )}
