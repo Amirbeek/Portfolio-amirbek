@@ -1,24 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Col, Row} from "react-bootstrap"
-const Container = styled.div`
-    background-color: ${props => props.theme.background};
-    padding: 2rem 0;
-    div{
-        background-color:  ${props => props.theme.skill_color};);
-        border-radius: 30px;
-        min-height: 420px;
-    }
- `
-const SectionWrapper = styled.div`
-  background-color: ${props => props.theme.skill_color};
-  border-radius: 30px;
-  padding: 2rem;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
+import {Container, Grid} from "@mui/material";
+const Parent = styled.div`
+    background-color: ${props => props.theme.skill_color};
+    padding: 3.5rem;
+    border-radius: 30px;
+`
 
 const AboutMe = styled.h1`
     color: ${props => props.theme.text_color_header};!important;);
@@ -41,18 +28,17 @@ const GitHubLink = styled.a`
     color: #8862f8;
     text-decoration: none;
     font-weight: bold;
-
     &:hover {
         color: #551a8b;
     }
 `;
 const BIO = () => {
   return (
-      <Container className="">
-          <div className="container">
-              <div className="p-0 p-md-5 d-flex flex-wrap">
-                  <div className="col-12 col-md-6 p-3">
-                      <SectionWrapper>
+      <Container  sx={{ maxWidth: '1390px' }} maxWidth={'1200px'}>
+          <Parent>
+              <Grid  container spacing={1}  >
+                  <Grid item xs={12} md={6}>
+
                           <AboutMe>About Me</AboutMe>
                           <Stylep>
                               I'm Amirbek Shomurodov, a software engineer dedicated to building scalable, efficient systems.
@@ -71,18 +57,17 @@ const BIO = () => {
                           <Stylep>
                               Currently studying Computer Science, I aim to solve complex challenges through impactful software.
                           </Stylep>
-                      </SectionWrapper>
-                  </div>
-
-                  <div className="col-12 col-md-6 p-3">
+                  </Grid>
+                  <Grid item xs={12} md={6}>
                       <ImageBIO
-                          src={require('../images/2024-11-08 14.21.23.jpg')}
+                          src={require('../images/default_image.webp')}
                           alt="Amirbek's picture"
                       />
-                  </div>
-              </div>
-          </div>
+                  </Grid>
+              </Grid>
+          </Parent>
       </Container>
+
 
   );
 };
