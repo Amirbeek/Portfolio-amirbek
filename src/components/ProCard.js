@@ -1,46 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import IconLinks from './IconLinks';
+import { Grid } from "@mui/material";
 
 const Wrapper = styled.div`
-    min-height: 484px;
-    div{
-        background-color: ${props => props.theme.face_color};
-        height: 100%;
-        width: 100%;
-    }
-    @media (min-width: 960px) {
-        .p{
-            border-radius: 30px 0 0 30px;
-        }
-        .k{
-            border-radius: 0 30px 30px 0;
-        }
-    }
-    .icons{
-        svg{
-            color: ${props => props.theme.text_color_header};
-        }
-    }
-`;
-
-const RowWrapper = styled.div`
-    .col-md-6{
-        @media (min-width: 960px) {
-            padding-right: 0!important;
-        }
-    }
+    background-color: ${props => props.theme.skill_color};
+    height: 482px;
 `;
 
 const Images = styled.img`
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 482px;
     transition: transform 0.5s;
-    &:hover {
-        transform: scale(1.01);
-    }
 `;
 
 const StyledTitle = styled.h2`
@@ -53,35 +26,36 @@ const StyleDesc = styled.p`
     a {
         color: ${props => props.theme.primary_color};
         text-decoration: none;
+
         &:hover {
             text-decoration: underline;
         }
     }
+
+    span {
+        color: ${props => props.theme.face_color_hover};
+    }
 `;
-const ProCard = ({
-                     title,
-                     description,
-                     image,
-                     repoLink,
-                     ...props
-                 }) => {
+
+const ProCard = ({ ...projectData }) => {
     return (
-        <RowWrapper className="row p-0 mt-5">
-            <Wrapper className="col-12 col-md-6">
-                <div className="j p p-5 icons">
-                    <StyledTitle>{title}</StyledTitle>
-                    <StyleDesc dangerouslySetInnerHTML={{ __html: description }} />
-                    <IconLinks {...props} />
-                </div>
-            </Wrapper>
-            <Wrapper className="col-12 col-md-6">
-                <div className="j k">
-                    <a href={repoLink} target="_blank" rel="noopener noreferrer">
-                        <Images src={image} alt={`${title} preview`} />
+        <Grid container spacing={1} sx={{ mt: 8 }}>
+            <Grid item xs={12} md={6}>
+                <Wrapper className="j p p-5 icons">
+                    <StyledTitle>{projectData.title}</StyledTitle>
+                    <StyleDesc dangerouslySetInnerHTML={{ __html: projectData.description }} />
+                    <IconLinks links={projectData} />
+                </Wrapper>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+                <Wrapper className="j k">
+                    <a href={projectData.repoLink} target="_blank" rel="noopener noreferrer">
+                        <Images src={projectData.image} alt={`${projectData.title} preview`} />
                     </a>
-                </div>
-            </Wrapper>
-        </RowWrapper>
+                </Wrapper>
+            </Grid>
+        </Grid>
     );
 };
 

@@ -32,8 +32,8 @@ function BlogAbout() {
                     <Blog_text>Amirbek Shomurodov | Personal Blog</Blog_text>
                     <Blog_p>
                         Welcome to my personal blog. Here I share my stories and ideas with the world. I am very
-                        passionate about programming and design. Currently, I am a Computer Science student at Stony
-                        Brook University.
+                        passionate about programming and design. Currently, I am a Computer Science student at Brunel
+                        University London.
                     </Blog_p>
                 </div>
 

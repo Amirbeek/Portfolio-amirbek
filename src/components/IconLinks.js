@@ -16,26 +16,26 @@ const IconLinks = ({ links }) => {
     const handleClick = () => {
         localStorage.setItem('project', JSON.stringify(links));
     };
-
+    const link = links.links
     return (
         <Wrapper>
-            {links.GitHubLink && (
-                <IconButton href={links.GitHubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            {link.GitHubLink && (
+                <IconButton href={links.links.GitHubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <GitHubIcon />
                 </IconButton>
             )}
-            {links.DomainLink && (
-                <IconButton href={links.DomainLink} target="_blank" rel="noopener noreferrer" aria-label="Website">
+            {link.DomainLink && (
+                <IconButton href={link.DomainLink} target="_blank" rel="noopener noreferrer" aria-label="Website">
                     <LanguageOutlinedIcon />
                 </IconButton>
             )}
-            {links.PagePath && (
-                <IconButton href={links.PagePath} aria-label="Project Page" onClick={handleClick}>
+            {link.PagePath && (
+                <IconButton href={link.PagePath} aria-label="Project Page" onClick={handleClick}>
                     <MenuBookOutlinedIcon />
                 </IconButton>
             )}
-            {links.repoLink && (
-                <IconButton href={links.repoLink} target="_blank" rel="noopener noreferrer" aria-label="Repository">
+            {link.repoLink && (
+                <IconButton href={link.repoLink} target="_blank" rel="noopener noreferrer" aria-label="Repository">
                     <OpenInNewOutlinedIcon />
                 </IconButton>
             )}

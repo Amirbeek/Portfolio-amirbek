@@ -8,6 +8,11 @@ const StyledNavbar = styled(Navbar)`
     padding: 1rem 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
 `;
 
 const Logo = styled.h1`

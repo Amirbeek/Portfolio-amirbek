@@ -15,13 +15,13 @@ export const projectData = [
         },
         highlight: "Feature Highlight",
         highlightDesc: `If you visited <a href='http://gooogle.com' >Github's homepage</a> recently, you probably 
-                    saw their new, re-designed landing page...`,
+                    saw their new, re-designed landing page... <span>hello</span>`,
         image: "https://janarosmonaliev.com/assets/github-home.png",
     },
     {
         title: "Crime Data Visualization",
         description: `If you ever visited <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub's homepage</a>, 
-                  you will notice a 3D globe that visualizes the platform's current activity...`,
+                  you will notice a 3D globe that visualizes the platform's current activity...<span>hello</span>`,
         image: "https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png",
         links: {
             GitHubLink: "https://github.com",

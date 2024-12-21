@@ -7,7 +7,7 @@ const Title = styled.h3`
 `
 function Blog() {
     return (
-        <div className={'container'}>
+        <div className={'container  mt-5 pt-5   '}>
             <BlogABout/>
             <Title className={'mt-5'}>
                     Blog Posts ↓
