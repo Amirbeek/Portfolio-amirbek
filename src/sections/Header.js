@@ -1,45 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Navbar, Nav, Dropdown, Modal, Button } from 'react-bootstrap';
+import { AppBar, Button, Menu, MenuItem, IconButton, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import {motion, useScroll, useSpring} from 'framer-motion';
 
-const StyledNavbar = styled(Navbar)`
-    background-color: ${(props) => props.theme.background};
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-   
-
+const NavbarContainer = styled.div`
+    width: 100%;
+    max-width: 1300px;  
+    margin: 10px auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
-const Logo = styled.h1`
+const StyledAppBar = styled(AppBar)`
+    background: ${(props) => props.theme.background}!important;
+    box-shadow: none !important;
+    transition:  0.3s ease-in-out!important;
+`;
+
+const Logo = styled(Link)`
     color: ${(props) => props.theme.text_color_header};
-    font-size: 1.8rem;
+    text-decoration: none;
+    font-size: 2rem;
     font-weight: bold;
-
-    @media (max-width: 576px) {
-        font-size: 1.5rem;
-    }
+    display: flex;
+    align-items: center;
 `;
 
-const NavItem = styled(Nav.Link)`
-    color: ${(props) => props.theme.text_color_header} !important;
-    font-weight: 500;
-    transition: color 0.3s;
+const NavButton = styled(motion(Button))`
+    color: ${(props) => props.theme.text_second_color}!important;
+    font-weight: 500!important;
+    margin-left: 1rem;
+    font-size: 1.1rem;
 
     &:hover {
-        color: hsla(0, 0%, 100%, 0.88);
+        color: #4209ed!important;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
         font-size: 0.9rem;
     }
 `;
 
-const ModeToggle = styled.div`
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+const ModeToggle = styled(IconButton)`
+    color: ${(props) => props.theme.text_color_header};
 
     @media (max-width: 576px) {
         font-size: 1.2rem;
@@ -47,69 +53,102 @@ const ModeToggle = styled.div`
 `;
 
 const Fomo = styled.span`
-    color: #8862f8;
+    color: ${(props) => props.theme.primary_color};
 `;
 
-function Header({ toggleTheme, theme }) {
-    const [showModal, setShowModal] = React.useState(false);
+const Header = ({ toggleTheme, theme }) => {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [showDialog, setShowDialog] = React.useState(false);
+    const { scrollYProgress } = useScroll()
 
-    const handleClose = () => setShowModal(false);
-    const handleShow = () => setShowModal(true);
+    const handleMenuClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+
+    const handleDialogOpen = () => setShowDialog(true);
+    const handleDialogClose = () => setShowDialog(false);
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    })
     return (
-        <StyledNavbar expand="lg">
-            <Navbar.Brand href="/">
-                <Logo>AmirbekShom <Fomo>_</Fomo></Logo>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto">
-                    <NavItem href="/blog">Blog</NavItem>
+        <StyledAppBar position="relative">
+            <motion.div
+                id="scroll-indicator"
+                style={{
+                    scaleX,
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: 4,
+                    originX: 0,
+                    backgroundColor: "rgb(66,9,237)",
+                }}
+            />
+            <NavbarContainer>
+                <Logo to={'/'}>AmirbekShom <Fomo>_</Fomo></Logo>
 
-                    {/* Resume Dropdown */}
-                    <Dropdown>
-                        <Dropdown.Toggle as={NavItem} id="resumeDropdown">
-                            Resume
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            <Dropdown.Item onClick={handleShow}>Quick View</Dropdown.Item>
-                            <Dropdown.Item href={require('../portfolio/Amirbek.pdf')} download>
+                <div style={{display: 'flex', alignItems: 'center'}}>
+                    <NavButton href="/blog">Blog</NavButton>
+
+                    <NavButton onClick={handleMenuClick}>Resume</NavButton>
+                    <Menu
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleMenuClose}
+                    >
+                        <MenuItem onClick={handleDialogOpen}>Quick View</MenuItem>
+
+                        <MenuItem onClick={handleMenuClose}>
+                            <a
+                                href={require('../portfolio/Amirbek.pdf')}
+                                download
+                                style={{textDecoration: 'none', color: 'inherit'}}
+                            >
                                 Download
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    <NavItem href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">
+                            </a>
+                        </MenuItem>
+                    </Menu>
+
+
+                    <NavButton href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">
                         Github
-                    </NavItem>
-                    <NavItem href="/contact">Contact</NavItem>
-                </Nav>
-            </Navbar.Collapse>
-            <ModeToggle onClick={toggleTheme}>
-                {theme === 'light' ? (
-                    <FaSun size={24} color="#f2994a" />
-                ) : (
-                    <FaMoon size={24} color="#f2994a" />
-                )}
-            </ModeToggle>
-            <Modal show={showModal} onHide={handleClose} centered>
-                <Modal.Header closeButton>
-                    <Modal.Title>Quick View - Resume</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
+                    </NavButton>
+                    <NavButton href="/contact">Contact</NavButton>
+
+                    <ModeToggle onClick={toggleTheme}>
+                        {theme === 'light' ? (
+                            <FaSun size={24} color="#f2994a"/>
+                        ) : (
+                            <FaMoon size={24} color="#f2994a"/>
+                        )}
+                    </ModeToggle>
+                </div>
+            </NavbarContainer>
+
+            <Dialog open={showDialog} onClose={handleDialogClose} maxWidth="md" fullWidth>
+                <DialogTitle>Quick View - Resume</DialogTitle>
+                <DialogContent>
                     <iframe
                         src={require('../portfolio/Amirbek.pdf')}
-                        style={{width: '100%', height: '500px'}}
-                        frameBorder="0"
-                    ></iframe>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                        style={{width: '100%', height: '500px', border: 'none'}}
+                        title="Resume Quick View"
+                    />
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleDialogClose} color="primary">
                         Close
                     </Button>
-                </Modal.Footer>
-            </Modal>
-        </StyledNavbar>
+                </DialogActions>
+            </Dialog>
+        </StyledAppBar>
     );
-}
+};
 
 export default Header;

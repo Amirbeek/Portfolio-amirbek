@@ -69,7 +69,6 @@ function ContactPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would send the form data to the server or handle the submission
         console.log('Form submitted:', formData);
     };
 

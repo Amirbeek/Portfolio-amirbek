@@ -3,7 +3,7 @@ import Header from './sections/Header';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from './Theme';  // Assuming ThemeProvider is in Theme.js
+import { ThemeProvider } from './Theme';
 import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./sections/Footer";

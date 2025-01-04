@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {Container, Grid} from "@mui/material";
 const Parent = styled.div`
-    background-color: ${props => props.theme.skill_color};
     padding: 3.5rem;
     border-radius: 30px;
 `
@@ -12,7 +11,7 @@ const AboutMe = styled.h1`
     font-weight: bold;
 `
 const Stylep = styled.p`
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 400;
     line-height: 32px;
     color: ${props => props.theme.text_color_header};!important;);
@@ -41,7 +40,7 @@ const BIO = () => {
 
                           <AboutMe>About Me</AboutMe>
                           <Stylep>
-                              I'm Amirbek Shomurodov, a software engineer dedicated to building scalable, efficient systems.
+                              My name is Amirbek Shomurodov. I am a student software developer. I believe in design quality and always pay attention to details because that's what makes a great product.
                           </Stylep>
                           <Stylep>
                               At Brunel University, I led a team to create{' '}
@@ -55,7 +54,7 @@ const BIO = () => {
                               , an app for sharing ingredients, which enhanced my leadership and development skills.
                           </Stylep>
                           <Stylep>
-                              Currently studying Computer Science, I aim to solve complex challenges through impactful software.
+                              I am currently pursuing an Bachelor degree in Computer Science with a specialization in AI and Data Science at Brunel University London
                           </Stylep>
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -67,8 +66,6 @@ const BIO = () => {
               </Grid>
           </Parent>
       </Container>
-
-
   );
 };
 

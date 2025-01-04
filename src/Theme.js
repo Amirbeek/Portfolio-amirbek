@@ -1,7 +1,7 @@
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 const darkTheme = {
-  background: '#0e0e0e',
+  background: '#191818',
   secondaryBackground: '#0e0e0e',
   heading: '#343a40',
   text: '#495057',
@@ -9,7 +9,7 @@ const darkTheme = {
   face_color: '#2d2d2d',
   text_color_header: '#fff',
   face_color_hover: '#f2994a',
-  primary_color: '#8862f8',
+  primary_color: '#5a2de4',
   skill_color: '#2d2d2d',
 };
 
@@ -23,7 +23,7 @@ const lightTheme = {
   text: '#444444',
   face_color: '#f2f2f2',
   face_color_hover: '#f2994a',
-  primary_color: '#8862f8'
+  primary_color: '#5a2de4'
 };
 
 export const themes = { darkTheme, lightTheme };

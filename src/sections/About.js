@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import AnimatedSection from '../components/AnimatedSection';
+import { ReactTyped } from 'react-typed';
+import { motion } from 'framer-motion';
 
 const AboutContainer = styled.div`
     padding: 100px 100px;
-    background-color: ${props => props.theme.background}; 
     text-align: left;
 
     h1 {
-        color:${props => props.theme.text_color_header}; );
+        color:${props => props.theme.text_color_header};
         line-height: 72px;
         margin-top: 18px;
         font-size: 60px;
         font-weight: 700;
-        span {
+        .short-name {
             color: #828282;
         }
     }
@@ -24,6 +24,7 @@ const AboutContainer = styled.div`
         line-height: 1.6;
         font-weight: 700;
     }
+
     @media (max-width: 768px) {
         padding: 40px 20px; /* Reduced padding on smaller screens */
 
@@ -38,10 +39,10 @@ const AboutContainer = styled.div`
     }
 `;
 
-const FaceImg = styled.div`
+const FaceImg = styled(motion.div)` // Make FaceImg a motion.div for animation
     width: 100px;
     height: 100px;
-    background-color: ${props => props.theme.face_color}; // Correct usage
+    background-color: ${props => props.theme.face_color};
     border-radius: 50%;
     overflow: hidden;
     transition: background-color 0.3s ease;
@@ -53,7 +54,9 @@ const FaceImg = styled.div`
     }
 
     &:hover {
-        background-color: ${props => props.theme.face_color_hover}; // Hover effect
+        background-color: ${props => props.theme.face_color_hover};
+        transform: scale(1.1); // Slightly scale on hover
+        transition: transform 0.3s ease-in-out; // Add transition to scaling
     }
 `;
 
@@ -62,32 +65,34 @@ const FaceColor = styled.span`
 `;
 
 const About = () => {
-    const [currentText, setCurrentText] = useState("design");
-
-    useEffect(() => {
-        const texts = ["design", "develop", "create"];
-        let index = 0;
-        const interval = setInterval(() => {
-            setCurrentText(texts[index]);
-            index = (index + 1) % texts.length;
-        }, 1300);
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
-        <AnimatedSection id="about" className={'container'}>
-            <AboutContainer>
-                <FaceImg>
-                    <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
-                </FaceImg>
-                <h1>
-                    Hi, I'm Amirbek <span>(Amir)</span>
-                    <br />
-                    I <FaceColor>{currentText}</FaceColor> user-friendly products.
-                </h1>
-            </AboutContainer>
-        </AnimatedSection>
+        <AboutContainer>
+            <FaceImg
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
+            </FaceImg>
+            <motion.h1
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, type: 'spring', stiffness: 100 }}
+            >
+                Hi, I'm Amirbek <span className={'short-name'}>(Amir)</span>
+                <br />
+                I <FaceColor>
+                <ReactTyped
+                    strings={["design", "develop", "create"]}
+                    typeSpeed={100}
+                    backSpeed={50}
+                    backDelay={1000}
+                    startDelay={500}
+                    loop
+                />
+            </FaceColor> user-friendly products.
+            </motion.h1>
+        </AboutContainer>
     );
 };
 

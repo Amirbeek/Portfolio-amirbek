@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 const Wrapper = styled.div`
     background-color: ${props => props.theme.skill_color};
     height: 482px;
-    overflow: hidden; /* This ensures the image stays inside the border */
+    overflow: hidden;
 
 `;
 
@@ -25,6 +25,8 @@ const StyledTitle = styled.h2`
 `;
 
 const StyleDesc = styled.p`
+    font-size: 21px;
+    
     color: ${props => props.theme.text_color_header};
     a {
         color: ${props => props.theme.primary_color};

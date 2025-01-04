@@ -6,7 +6,7 @@ const CardContainer = styled.div`
 `;
 const ProjectTitle = styled.h1`
     color: ${props => props.theme.text_color_header}; );
-    margin-top: 30px;
+    margin-top: 100px;
     font-weight: bold;
     @media (min-width: 768px) {
         font-size: 60px;
