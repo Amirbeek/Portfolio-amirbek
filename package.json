@@ -55,6 +55,7 @@
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.28.0",
     "react-toastify": "^10.0.6",
+    "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",

@@ -8,13 +8,12 @@ import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
-import Project_Page from "./pages/Project_Page";
 
 const GlobalStyle = createGlobalStyle`
     body {
-        background-color: ${props => props.theme.secondaryBackground};
+        background-color: ${props => props.theme.background}!important;
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: Inter, sans-serif;
         transition: background-color 0.3s ease;
     }
 `;
@@ -59,7 +58,6 @@ function App() {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/contact" element={<ContactPage />} />
-                        <Route path='/project' element={<Project_Page projectData={projectData} />} />
                     </Routes>
                     <Footer/>
                 </Router>

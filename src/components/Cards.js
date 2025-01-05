@@ -1,7 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import styled from "styled-components";
 
-// Styled components
 const FunCard = styled(Card)`
     transition: 1s;
     background-color: ${props => props.theme.face_color};
@@ -29,7 +28,6 @@ const Card_p = styled.div`
     }
 `;
 
-// Card component
 function Cards({ image, title, date, ProjectType, Url }) {
     return (
         <FunCard style={{  marginBottom: '20px', borderRadius: '15px', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>

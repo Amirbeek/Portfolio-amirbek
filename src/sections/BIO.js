@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Container, Grid} from "@mui/material";
 const Parent = styled.div`
+    background-color: ${props => props.theme.face_color};
     padding: 3.5rem;
     border-radius: 30px;
 `

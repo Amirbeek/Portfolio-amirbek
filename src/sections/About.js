@@ -45,7 +45,8 @@ const FaceImg = styled(motion.div)` // Make FaceImg a motion.div for animation
     background-color: ${props => props.theme.face_color};
     border-radius: 50%;
     overflow: hidden;
-    transition: background-color 0.3s ease;
+    transition:  0.3s ease-in-out;
+    //transition: transform 0.3s ease-in-out; /
 
     img {
         width: 100%;
@@ -56,7 +57,6 @@ const FaceImg = styled(motion.div)` // Make FaceImg a motion.div for animation
     &:hover {
         background-color: ${props => props.theme.face_color_hover};
         transform: scale(1.1); // Slightly scale on hover
-        transition: transform 0.3s ease-in-out; // Add transition to scaling
     }
 `;
 

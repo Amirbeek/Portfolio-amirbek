@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Link} from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Blog_text = styled.h1`
     color: ${props => props.theme.text_color_header};
@@ -43,7 +44,7 @@ function BlogAbout() {
                         passionate about programming and design. Currently, I am a Computer Science student at Brunel
                         University London.
                     </Blog_p>
-                    <ButtonStyle to={'/contact'} style={{textDecoration:'none'}}>Get in touch →</ButtonStyle>
+                    <ButtonStyle to={'/contact'} style={{textDecoration:'none'}}>Get in touch <ArrowForwardIcon style={{verticalAlign: 'middle', width:18}}/></ButtonStyle>
                 </div>
                 <div className="col-12 col-md-4  order-md-1 d-flex justify-content-center" >
                     <ImageBIO
