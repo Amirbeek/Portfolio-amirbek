@@ -1,7 +1,8 @@
 export const projectData = [
     {
         title: "MiniDesk",
-        description: `s.<br/> <br> This project was supervised by Alex Kuhn (ex-Apple Engineer) and led by me as 
+        description: `TinyDesk is a web application that lets users manage bookmarks and boost their productivity
+                  with handy widgets.<br/> <br> This project was supervised by Alex Kuhn (ex-Apple Engineer) and led by me as 
                   a Lead Developer and Designer.<br><br>
         It was built with <span>GatsbyJS </span> & <span>Material UI</span> and deployed to Heroku.
     `,
