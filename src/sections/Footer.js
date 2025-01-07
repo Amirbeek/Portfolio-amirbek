@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowUp } from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaTwitter, FaArrowUp, FaBehance} from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   background-color: ${props => props.theme.background};
@@ -62,14 +62,14 @@ const Footer = () => {
   return (
     <FooterContainer className={'align-items-end'}>
       <SocialLinks>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Amirbeek" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/amirbekshomurodovakmal/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
-          <FaTwitter />
+        <a href="https://www.behance.net/amirbekshomuro" target="_blank" rel="noopener noreferrer">
+          <FaBehance  />
         </a>
       </SocialLinks>
       <Copyright>© {new Date().getFullYear()} Amirbek's Portfolio. All rights reserved.</Copyright>

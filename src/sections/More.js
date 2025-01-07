@@ -35,10 +35,9 @@ function More() {
                 <Card
                     title="Three.js Projects"
                     url={'https://www.behance.net/amirbekshomuro'}
-                    description="Explore interactive 3D experiences! Dive into our Three.js projects, showcasing cutting-edge graphics and animations. Click to discover the art of code"
+                    description="Explore interactive 3D experiences! Dive into my Three.js projects, showcasing cutting-edge graphics and animations. Click to discover the art of code"
                     background={Blog}
                 >
-
                     <a href="https://www.behance.net/amirbekshomuro" target="_blank" rel="noreferrer">
                         visit behance.net  <ArrowForwardIcon style={{ verticalAlign: 'middle', width: 18 }} />
                     </a>
