@@ -1,17 +1,13 @@
 export const projectData = [
     {
         title: "MiniDesk",
-        description: `s.<br/> <br> This project was supervised by Alex Kuhn (ex-Apple Engineer) and led by me as 
-                  a Lead Developer and Designer.<br><br>
-        It was built with <span>GatsbyJS </span> & <span>Material UI</span> and deployed to Heroku.
-    `,
+        "description": "MiniDesk is a web application that lets users manage bookmarks and boost their productivity. Users can also use it as a browser extension with handy widgets.<br/><br/>This project was supervised by Alex Kuhn (ex-Apple Engineer), and I contributed as a Full Stack Developer and Designer.<br/><br/>This project was presented at Brunel University, and I created and presented the project’s pitch deck to an audience of 100+ people.<br/><br/>It was built with <span>Node.js</span> & <span>React.js (Material UI)</span> and deployed to Heroku.",
         responsibilities: `I was mainly responsible for system architecture and user interface design.
                        It was built with GatsbyJS & Material UI and deployed to Heroku.`,
         links: {
             GitHubLink: "https://github.com/Amirbeek/MiniDesk",
             DomainLink: "social_url",
             repoLink: "domain_url",
-            PagePath: "/miniDesk",
         },
 
         highlight: "Feature Highlight",
@@ -19,16 +15,22 @@ export const projectData = [
                     saw their new, re-designed landing page... <span>hello</span>`,
         image: "https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png",
         image_url:'',
-        additional_images:['https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png',"https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png"]
+        additional_images:['./images/minidesk.png',	'./images/mindesk2.png']
     },
     {
-        title: "Airport System",
-        description: ``,
+        title: "Flight Booking System",
+        description: `This system, developed using <span>Java Swing</span>, transforms the flight booking process by
+         incorporating interactive maps that simplify user navigation.
+         Additionally, it allows users to purchase food and products directly from the interface, integrating travel
+          with retail options seamlessly. <br><br>
+            Supervised by <a href="https://www.brunel.ac.uk/people/zear-ibrahim"> Zear Ibrahim</a> from Brunel University, I led the project's design and development, functioning as both the Java developer and 
+            system designer. The project, created for <span>Java GUI</span>, demonstrates innovative potential for comprehensive travel and
+             retail solutions within a single platform.
+    `,
         image: ["https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png"],
         links: {
-            GitHubLink: "https://github.com",
-            DomainLink: "https://uzbegim.co.uk",
-            repoLink: "https://amirbeek.github.io",
+            GitHubLink: "https://github.com/Amirbeek/Flight_System",
+            DomainLink: "behance",
             PagePath: "/airport",
         },
         Project_Title: "APP",

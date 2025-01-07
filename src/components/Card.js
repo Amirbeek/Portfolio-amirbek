@@ -1,77 +1,78 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import Box from "@mui/material/Box";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
-import { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-  body {
-    font-family: 'Open Sans', sans-serif;
-  }
-`;
-
-const StyledCard = styled(Link)`
+const StyledBox = styled(Box)`
     text-decoration: none;
-    color: #fff!important;
-    width: 350px;
-    margin-top: 5rem;
-    height: 350px;
+    color: #fff;
+    width: 100%;
+    margin-top: 2rem;
+    height: 370px;
     background-image: url(${props => props.background});
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     position: relative;
-    border-radius: 20px;
-    margin-right: 40px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    
-    h3 {
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    p {
-        font-size: 15px;
-        font-weight: 400;
-        color: #d3d3d3;
-    }
-
-    a {
-        color: #d3d3d3;
-        font-size: 15px;
-        margin-top: 10px;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    border-radius:  20px;
 `;
 
-const CardWrapper = styled.div`
+
+const CardWrapper = styled(CardContent)`
     position: absolute;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
     padding: 2rem 1rem 1.5rem 1rem;
-    border-radius: 0 0 20px 20px;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-`
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.53));
+    border-radius: 20px;
+
+`;
 
 export const Card = ({ title, description, background, children, url }) => {
+
+    const handleRedirect = () => {
+        window.open(url, '_blank');
+    };
+
     return (
         <>
-            <GlobalStyle />
-            <StyledCard background={background} to={url} target={'_blank'}>
-                <CardWrapper>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                    {children}
-                </CardWrapper>
-            </StyledCard>
+            <StyledBox
+                background={background}
+                onClick={handleRedirect}
+            >
+
+                <CardActionArea
+                    sx={{
+                        height: '100%',
+                        width: '100%',
+                        display: 'block',
+                        '&[data-active]': {
+                            '&:hover': {
+                                backgroundColor: 'action.selectedHover',
+                            },
+                        },
+                    }}
+                >
+                    <CardWrapper sx={{ height: '100%' , width:'100%'}}>
+                       <div style={{position:'absolute', bottom:'14px'}}>
+                           <Typography variant="h5" component="h1">
+                               {title}
+                           </Typography>
+                           <Typography variant="body2" color="#d9d9d9">
+                               {description}
+
+                           </Typography>
+                           <Typography variant="body1" color="#d9d9d9" sx={{marginTop:2}}>
+                               {children}
+                           </Typography>
+
+                       </div>
+                    </CardWrapper>
+                </CardActionArea>
+            </StyledBox>
         </>
     );
 };

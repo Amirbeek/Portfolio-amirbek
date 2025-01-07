@@ -12,9 +12,12 @@ const AboutMe = styled.h1`
     font-weight: bold;
 `
 const Stylep = styled.p`
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 32px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.00938em;
+    
+
     color: ${props => props.theme.text_color_header};!important;);
 `
 const ImageBIO = styled.img`
@@ -33,41 +36,41 @@ const GitHubLink = styled.a`
     }
 `;
 const BIO = () => {
-  return (
-      <Container  sx={{ maxWidth: '1390px' }} maxWidth={'1200px'}>
-          <Parent>
-              <Grid  container spacing={1}  >
-                  <Grid item xs={12} md={6}>
+    return (
+        <Container  sx={{ maxWidth: '1390px' }} maxWidth={'1200px'}>
+            <Parent>
+                <Grid  container spacing={1}  >
+                    <Grid item xs={12} md={6}>
 
-                          <AboutMe>About Me</AboutMe>
-                          <Stylep>
-                              My name is Amirbek Shomurodov. I am a student software developer. I believe in design quality and always pay attention to details because that's what makes a great product.
-                          </Stylep>
-                          <Stylep>
-                              At Brunel University, I led a team to create{' '}
-                              <GitHubLink
-                                  href="https://github.com/RandomUser/Nutri-Book"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                              >
-                                  Nutri-Book
-                              </GitHubLink>
-                              , an app for sharing ingredients, which enhanced my leadership and development skills.
-                          </Stylep>
-                          <Stylep>
-                              I am currently pursuing an Bachelor degree in Computer Science with a specialization in AI and Data Science at Brunel University London
-                          </Stylep>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                      <ImageBIO
-                          src={require('../images/default_image.webp')}
-                          alt="Amirbek's picture"
-                      />
-                  </Grid>
-              </Grid>
-          </Parent>
-      </Container>
-  );
+                        <AboutMe>About Me</AboutMe>
+                        <Stylep>
+                            My name is Amirbek Shomurodov. I am a student software developer. I believe in design quality and always pay attention to details because that's what makes a great product.
+                        </Stylep>
+                        <Stylep>
+                            At Brunel University, I led a team to create{' '}
+                            <GitHubLink
+                                href="https://github.com/RandomUser/Nutri-Book"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Nutri-Book
+                            </GitHubLink>
+                            , an app for sharing ingredients, which enhanced my leadership and development skills.
+                        </Stylep>
+                        <Stylep>
+                            I am currently pursuing an Bachelor degree in Computer Science with a specialization in AI and Data Science at Brunel University London
+                        </Stylep>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <ImageBIO
+                            src={require('../images/default_image.webp')}
+                            alt="Amirbek's picture"
+                        />
+                    </Grid>
+                </Grid>
+            </Parent>
+        </Container>
+    );
 };
 
 export default BIO;

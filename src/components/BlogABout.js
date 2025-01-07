@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {Link} from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const Blog_text = styled.h1`
+const Blog_text = styled.h2`
     color: ${props => props.theme.text_color_header};
     font-weight: bold;
 `;
@@ -16,15 +16,15 @@ const Blog_p = styled.p`
     color: ${props => props.theme.text_color_header};!important;);`;
 
 const ImageBIO = styled.img`
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     border: 6px solid ${props => props.theme.primary_color};
 `
 const ButtonStyle = styled(Link)`
     background-color: ${props => props.theme.primary_color};
     color: #fff;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
@@ -35,7 +35,7 @@ const ButtonStyle = styled(Link)`
 function BlogAbout() {
     return (
         <div className="container">
-            <div className="row align-items-center flex-lg-row-reverse">
+            <div className="row align-items-center flex-lg-row-reverse p-5">
 
                 <div className="col-12 col-md-8  order-md-2 p-5 ">
                     <Blog_text>Amirbek Shomurodov | Personal Blog</Blog_text>

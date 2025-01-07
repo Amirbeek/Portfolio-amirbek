@@ -25,8 +25,14 @@ const StyledTitle = styled.h2`
 `;
 
 const StyleDesc = styled.p`
-    font-size: 21px;
-    
+    .MuiTypography-body1 {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.00938em;
+    }
+
+
     color: ${props => props.theme.text_color_header};
     a {
         color: ${props => props.theme.primary_color};
@@ -66,7 +72,7 @@ const ProCard = ({ ...projectData }) => {
                     {projectData.additional_images.map((image, index) => (
                         <Grid item xs={12} md={6} key={index}>
                             <Wrapper className={index === 0 ? 'uni_img-left' : 'uni_img-right'}>
-                                <Images src={image} alt={`${projectData.title} preview`} />
+                                <Images src={`${image}`} alt={`${projectData.title} preview`} />
                             </Wrapper>
                         </Grid>
                     ))}

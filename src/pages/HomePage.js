@@ -2,7 +2,6 @@ import React from 'react';
 import About from '../sections/About';
 import BIO from '../sections/BIO';
 import Projects from '../sections/Projects';
-import styled from "styled-components";
 import More from "../sections/More";
 
 function HomePage() {
