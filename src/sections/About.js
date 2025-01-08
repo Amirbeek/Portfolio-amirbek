@@ -4,9 +4,8 @@ import { ReactTyped } from 'react-typed';
 import { motion } from 'framer-motion';
 
 const AboutContainer = styled.div`
-    padding: 100px 100px;
-    text-align: left;
-
+    padding: 100px 0px;
+    text-align: left;   
     h1 {
         color:${props => props.theme.text_color_header};
         line-height: 72px;
@@ -26,7 +25,7 @@ const AboutContainer = styled.div`
     }
 
     @media (max-width: 768px) {
-        padding: 40px 20px; /* Reduced padding on smaller screens */
+        padding: 40px 20px; 
 
         h1 {
             font-size: 36px;
@@ -39,14 +38,13 @@ const AboutContainer = styled.div`
     }
 `;
 
-const FaceImg = styled(motion.div)` // Make FaceImg a motion.div for animation
+const FaceImg = styled(motion.div)`
     width: 100px;
     height: 100px;
     background-color: ${props => props.theme.face_color};
     border-radius: 50%;
     overflow: hidden;
     transition:  0.3s ease-in-out;
-    //transition: transform 0.3s ease-in-out; /
 
     img {
         width: 100%;
@@ -56,7 +54,7 @@ const FaceImg = styled(motion.div)` // Make FaceImg a motion.div for animation
 
     &:hover {
         background-color: ${props => props.theme.face_color_hover};
-        transform: scale(1.1); // Slightly scale on hover
+        transform: scale(1.1); 
     }
 `;
 
@@ -66,32 +64,34 @@ const FaceColor = styled.span`
 
 const About = () => {
     return (
-        <AboutContainer>
-            <FaceImg
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
-                <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
-            </FaceImg>
-            <motion.h1
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, type: 'spring', stiffness: 100 }}
-            >
-                Hi, I'm Amirbek <span className={'short-name'}>(Amir)</span>
-                <br />
-                I <FaceColor>
-                <ReactTyped
-                    strings={["design", "develop", "create"]}
-                    typeSpeed={100}
-                    backSpeed={50}
-                    backDelay={1000}
-                    startDelay={500}
-                    loop
-                />
-            </FaceColor> user-friendly products.
-            </motion.h1>
+        <AboutContainer className={'container-lg'}>
+            <div style={{height:'300px'}}>
+                <FaceImg
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
+                </FaceImg>
+                <motion.h1
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, type: 'spring', stiffness: 100 }}
+                >
+                    Hi, I'm Amirbek <span className={'short-name'}>(Amir)</span>
+                    <br />
+                    I <FaceColor>
+                    <ReactTyped
+                        strings={["design", "develop", "create"]}
+                        typeSpeed={100}
+                        backSpeed={50}
+                        backDelay={1000}
+                        startDelay={500}
+                        loop
+                    />
+                </FaceColor> user-friendly products.
+                </motion.h1>
+            </div>
         </AboutContainer>
     );
 };

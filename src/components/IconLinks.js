@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Wrapper = styled.footer`
     svg {
@@ -37,6 +38,11 @@ const IconLinks = ({ links }) => {
             {link.repoLink && (
                 <IconButton href={link.repoLink} target="_blank" rel="noopener noreferrer" aria-label="Repository">
                     <OpenInNewOutlinedIcon />
+                </IconButton>
+            )}
+            {link.video && (
+                <IconButton href={link.video} aria-label="Project Page" onClick={handleClick}>
+                    <YouTubeIcon/>
                 </IconButton>
             )}
         </Wrapper>

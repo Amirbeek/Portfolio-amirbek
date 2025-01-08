@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 
 const Wrapper = styled.div`
     background-color: ${props => props.theme.skill_color};
-    height: 482px;
+    height: 500px;
     overflow: hidden;
 
 `;
@@ -14,7 +14,7 @@ const Images = styled.img`
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 482px;
+    height: 500px;
     border-radius: inherit; 
     z-index: -1;
 `;

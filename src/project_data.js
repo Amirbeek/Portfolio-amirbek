@@ -13,8 +13,8 @@ export const projectData = [
         highlight: "Feature Highlight",
         highlightDesc: `If you visited <a href='http://gooogle.com' >Github's homepage</a> recently, you probably 
                     saw their new, re-designed landing page... <span>hello</span>`,
-        image: "https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png",
-        image_url:'',
+        image: "./images/diagram.png",
+        image_url:'./images/diagram.png',
         additional_images:['./images/minidesk.png',	'./images/mindesk2.png']
     },
     {
@@ -27,11 +27,12 @@ export const projectData = [
             system designer. The project, created for <span>Java GUI</span>, demonstrates innovative potential for comprehensive travel and
              retail solutions within a single platform.
     `,
-        image: ["https://janarosmonaliev.com/static/crime-data-feature-e5829c5eb36fffed279732775b967f93.png"],
+        image: ["./images/FrameF.png"],
         links: {
             GitHubLink: "https://github.com/Amirbeek/Flight_System",
-            DomainLink: "behance",
-            PagePath: "/airport",
+            DomainLink: "https://www.behance.net/gallery/216384021/Flight-Booking-System",
+            video: 'https://www.youtube.com/watch?v=UzrsrJYfmdY'
+            // PagePath: "/airport",
         },
         Project_Title: "APP",
         Project_type: "Web Application",
