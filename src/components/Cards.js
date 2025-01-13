@@ -53,7 +53,7 @@ function Cards({ image, title, date, ProjectType, Url }) {
                 style={{
                     borderRadius: '15px 15px 0 0',
                     objectFit: 'cover',
-                    height: '180px',
+                    height: '220px',
                 }}
             />
             <Card.Body>

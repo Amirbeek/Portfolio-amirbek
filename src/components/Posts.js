@@ -23,14 +23,15 @@ function Posts() {
                            Url={'/threejs'}
                     />
                 </div>
-                {/*<div className="col-12 col-md-4">*/}
-                {/*    <Cards image={'https://janarosmonaliev.com/static/tinydesk-feature-2-8664c1aea65b568a24054b6c0c1ce1a2.png'}*/}
-                {/*           title={'My research project for CSE 487 at SUNY Korea'}*/}
-                {/*           date={'February 01, 2021'}*/}
-                {/*           ProjectType={'Development'}*/}
-                {/*           Url={'https//:github.com'}*/}
-                {/*    />*/}
-                {/*</div>*/}
+                <div className="col-12 col-md-4">
+                    <Cards image={'./images/GitHub_Globe1.png'}
+                           title={'Flight data visualization on a globe, inspired by Github\'s homepage'}
+                           date={'February 01, 2021'}
+                           ProjectType={'Development'}
+                           Url={'https//:github.com'}
+                    />
+                </div>
+
             </div>
         </div>
     );
