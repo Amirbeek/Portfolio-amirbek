@@ -11,11 +11,11 @@ export const projectData = [
         },
 
         highlight: "Feature Highlight",
-        highlightDesc: `If you visited <a href='http://gooogle.com' >Github's homepage</a> recently, you probably 
+        highlightDesc: `If you visited <a href='http://gooogle.com' >GitHub's homepage</a> recently, you probably 
                     saw their new, re-designed landing page... <span>hello</span>`,
         image: "./images/diagram.png",
         image_url:'./images/diagram.png',
-        additional_images:['./images/minidesk.png',	'./images/mindesk2.png']
+        additional_images:['./images/minidesk.png',	'./images/minidesk1.png']
     },
     {
         title: "Flight Booking System",
@@ -27,7 +27,7 @@ export const projectData = [
             system designer. The project, created for <span>Java GUI</span>, demonstrates innovative potential for comprehensive travel and
              retail solutions within a single platform.
     `,
-        image: ["./images/FrameF.png"],
+        image: ["./images/FrameF1.jpg"],
         links: {
             GitHubLink: "https://github.com/Amirbeek/Flight_System",
             DomainLink: "https://www.behance.net/gallery/216384021/Flight-Booking-System",

@@ -1,3 +1,10 @@
+:root {
+    --baseline: 24px;                /* The base spacing unit */
+    --space-sm: calc(var(--baseline) / 2); /* Small space (12px) */
+    --space-md: var(--baseline);      /* Medium space (24px) */
+    --space-lg: calc(var(--baseline) * 2); /* Large space (48px) */
+    --space-xl: calc(var(--baseline) * 3); /* Extra large space (72px) */
+}
 
 .additionalImages {
     border-radius: 0 0 30px 30px;

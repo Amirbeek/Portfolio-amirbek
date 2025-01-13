@@ -8,6 +8,8 @@ import { themes } from './Theme';
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
+import ThreePage from "./pages/ThreePage";
+import Tinthrove from "./pages/Tinthrove";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -58,6 +60,8 @@ function App() {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path={'/threejs'} element={<ThreePage />} />
+                        <Route path={'/tintthrove'} element={<Tinthrove />} />
                     </Routes>
                     <Footer/>
                 </Router>
