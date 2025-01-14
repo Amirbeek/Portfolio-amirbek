@@ -10,6 +10,7 @@ import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
 import ThreePage from "./pages/ThreePage";
 import Tinthrove from "./pages/Tinthrove";
+import Globe from "./pages/Globe";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -62,6 +63,8 @@ function App() {
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path={'/threejs'} element={<ThreePage />} />
                         <Route path={'/tintthrove'} element={<Tinthrove />} />
+                        <Route path={'/gitglobe'} element={<Globe />} />
+
                     </Routes>
                     <Footer/>
                 </Router>

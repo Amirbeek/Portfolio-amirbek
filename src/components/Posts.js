@@ -24,11 +24,11 @@ function Posts() {
                     />
                 </div>
                 <div className="col-12 col-md-4">
-                    <Cards image={'./images/GitHub_Globe1.png'}
+                    <Cards image={'./images/GitHub_Globe2.png'}
                            title={'Flight data visualization on a globe, inspired by Github\'s homepage'}
                            date={'February 01, 2021'}
                            ProjectType={'Development'}
-                           Url={'https//:github.com'}
+                           Url={'/gitglobe'}
                     />
                 </div>
 
