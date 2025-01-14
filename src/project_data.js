@@ -23,8 +23,8 @@ export const projectData = [
                        It was built with GatsbyJS & Material UI and deployed to Heroku.`,
         links: {
             GitHubLink: "https://github.com/Amirbeek/MiniDesk",
-            DomainLink: "social_url",
-            repoLink: "https://minidesk.me",
+            PagePath:'/gitglobe',
+            repoLink: "https://github-globe-visualization.vercel.app",
         },
 
         highlight: "Feature Highlight",

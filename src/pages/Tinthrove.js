@@ -88,9 +88,8 @@ def get_colors(image, number_of_colors):
                 </Typography>
                 <Box sx={{ width: '100%', overflow: 'hidden' }}>
                     <video
-                        controls
                         preload="metadata"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{width:'100%',height:'100%'}}
                         loop
                         autoPlay
                         muted
