@@ -7,7 +7,10 @@ const Wrapper = styled.div`
     background-color: ${props => props.theme.skill_color};
     height: 500px;
     overflow: hidden;
-
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        padding:1.4rem!important;
+    }
 `;
 
 const Images = styled.img`

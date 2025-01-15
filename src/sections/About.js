@@ -41,10 +41,11 @@ const AboutContainer = styled.div`
 const FaceImg = styled(motion.div)`
     width: 100px;
     height: 100px;
+    transition:  0.3s ease-in-out;
+
     background-color: ${props => props.theme.face_color};
     border-radius: 50%;
     overflow: hidden;
-    transition:  0.3s ease-in-out;
 
     img {
         width: 100%;

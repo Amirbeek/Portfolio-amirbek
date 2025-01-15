@@ -1,109 +1,248 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import {
+    Container,
+    Typography,
+    TextField,
+    Button,
+    Grid,
+    Snackbar,
+    Alert,
+    Paper,
+} from "@mui/material";
+import axios from 'axios';
+import {useNavigate} from "react-router-dom";
+import styled from "styled-components";
 
-const ContactWrapper = styled.div`
-    max-width: 600px;
-    margin: 2rem auto;
+const StyledPaper = styled(Paper)`
     padding: 2rem;
-    background-color: ${props => props.theme.background};
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid ${props => props.theme.border}!important;
+    background-color: ${props => props.theme.bgContact}!important;
 `;
-
-const ContactTitle = styled.h2`
-    text-align: center;
-    color: ${props => props.theme.text_color_header};
-`;
-
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-`;
-
-const Input = styled.input`
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: ${props => props.theme.text_color};
-`;
-
-const Textarea = styled.textarea`
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: ${props => props.theme.text_color};
-    resize: vertical;
-`;
-
-const Button = styled.button`
-    padding: 0.8rem;
-    border: none;
-    background-color: #8862f8;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-
-    &:hover {
-        background-color: #551a8b;
+const CInput = styled(TextField)`
+    background-color: ${props => props.theme.contactInput};
+    border-radius: 5px;
+    color: #0a58ca;
+    .MuiInputBase-input {
+        color: ${props => props.theme.text_second_color}; 
     }
-`;
+    & .MuiInputLabel-root { 
+        color: ${props => props.theme.text_second_color};
+    }
+    .MuiInputLabel-root {
+        color: ${props => props.theme.text_second_color}!important; 
+    }
+    & .MuiOutlinedInput-root {
+        &:hover .MuiOutlinedInput-notchedOutline {
+            border-color: #5a2de4;
+        }
+        &.Mui-focused {
+            .MuiOutlinedInput-notchedOutline {
+                border-color: #f2994a !important; 
+            }
+            .MuiInputLabel-root {
+                color: #f2994a !important;
+            }
+            .•css-1134811-Mu1FormLabel-root-MusInputLabal-root:focus {
+                outline: none; 
+            }
+        }
+    }
+`
 
-function ContactPage() {
+
+
+
+
+const ContactPage = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        subject:"",
+        message: ""
     });
 
-    const handleChange = (e) => {
+    const [errors, setErrors] = useState({});
+    const [snackbar, setSnackbar] = useState({
+        open: false,
+        message: "",
+        severity: "success"
+    });
+
+    const validateEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+        setErrors((prev) => ({
+            ...prev,
+            [name]: ""
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const newErrors = {};
+
+        if (!formData.name.trim()) {
+            newErrors.name = "Name is required";
+        }
+
+        if (!formData.email.trim()) {
+            newErrors.email = "Email is required";
+        } else if (!validateEmail(formData.email)) {
+            newErrors.email = "Please enter a valid email";
+        }
+
+        if (!formData.message.trim()) {
+            newErrors.message = "Message is required";
+        }
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        try {
+            await axios.post('https://formcarry.com/s/IA6WaDrT7R2', formData, {
+                headers: { 'Accept': 'application/json' }
+            });
+            setSnackbar({
+                open: true,
+                message: "Message sent successfully!",
+                severity: "success"
+            });
+            setFormData({ name: "", email: "",subject:"", message: "" });
+            // navigate('/')
+        } catch (error) {
+            setSnackbar({
+                open: true,
+                message: "Failed to send message.",
+                severity: "error"
+            });
+        }
+    };
+
+    const handleCloseSnackbar = () => {
+        setSnackbar({
+            ...snackbar,
+            open: false
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-    };
-
     return (
-        <ContactWrapper>
-            <ContactTitle>Contact Me</ContactTitle>
-            <Form onSubmit={handleSubmit}>
-                <Input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-                <Input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-                <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="5"
-                    required
-                />
-                <Button type="submit">Send Message</Button>
-            </Form>
-        </ContactWrapper>
+      <div style={{}}>
+          <Container maxWidth="lg"  sx={{height: "75vh",display: "flex", justifyContent: "center", alignItems: "center"}}>
+
+              <Grid container spacing={4} sx={{ mt: 4 }}>
+                  <Grid item xs={12} md={5} >
+                      <StyledPaper sx={{height:'100%', display:'flex',alignItems: 'center',justifyContent:'center',
+                          backgroundImage: 'url(images/contact.jpg)',
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                      }}>
+                          <Typography variant="h4" gutterBottom sx={{ mb: 3 ,fontWeight:'bolder',color:'#fff'}}>
+                              Contact Me
+                          </Typography>
+                      </StyledPaper>
+                  </Grid>
+
+                  <Grid item xs={12} md={7}>
+                      <StyledPaper component="form" onSubmit={handleSubmit}>
+                          <Grid container spacing={3}>
+                              <Grid item xs={12}>
+                                  <CInput
+                                      fullWidth
+                                      label="Name"
+                                      name="name"
+                                      value={formData.name}
+                                      onChange={handleInputChange}
+                                      error={!!errors.name}
+                                      helperText={errors.name}
+                                      required
+                                  />
+                              </Grid>
+
+                              <Grid item xs={12}>
+                                  <CInput
+                                      fullWidth
+                                      label="Email"
+                                      name="email"
+                                      type="email"
+                                      value={formData.email}
+                                      onChange={handleInputChange}
+                                      error={!!errors.email}
+                                      helperText={errors.email}
+                                      required
+                                  />
+                              </Grid>
+                              <Grid item xs={12}>
+                                  <CInput
+                                      fullWidth
+                                      label="Subject"
+                                      name="subject"
+                                      type="subject"
+                                      value={formData.subject}
+                                      onChange={handleInputChange}
+                                      error={!!errors.subject}
+                                      helperText={errors.subject}
+                                  />
+                              </Grid>
+                              <Grid item xs={12}>
+                                  <CInput
+                                      fullWidth
+                                      label="Message"
+                                      name="message"
+                                      multiline
+                                      rows={4}
+                                      value={formData.message}
+                                      onChange={handleInputChange}
+                                      error={!!errors.message}
+                                      helperText={errors.message}
+                                      required
+                                  />
+                              </Grid>
+
+                              <Grid item xs={12}>
+                                  <Button
+                                      type="submit"
+                                      variant="contained"
+                                      size="large"
+                                      fullWidth
+                                      sx={{ mt: 2 , backgroundColor: '#5a2de4', borderRadius:2, color: 'white' }}
+                                  >
+                                      Send Message
+                                  </Button>
+                              </Grid>
+                          </Grid>
+                      </StyledPaper>
+                  </Grid>
+              </Grid>
+
+              <Snackbar
+                  open={snackbar.open}
+                  autoHideDuration={6000}
+                  onClose={handleCloseSnackbar}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              >
+                  <Alert
+                      onClose={handleCloseSnackbar}
+                      severity={snackbar.severity}
+                      sx={{ width: "100%" }}
+                  >
+                      {snackbar.message}
+                  </Alert>
+              </Snackbar>
+          </Container>
+      </div>
     );
-}
+};
 
 export default ContactPage;

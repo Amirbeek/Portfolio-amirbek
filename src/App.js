@@ -17,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.background}!important;
         margin: 0;
         font-family: Inter, sans-serif;
-        transition: background-color 0.3s ease;
     }
 `;
 

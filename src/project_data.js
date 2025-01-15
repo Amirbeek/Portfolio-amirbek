@@ -1,7 +1,7 @@
 export const projectData = [
     {
         title: "MiniDesk",
-        description: "MiniDesk is a web application that lets users manage bookmarks and boost their productivity. Users can also use it as a browser extension with handy widgets.<br/><br/>This project was supervised by Alex Kuhn (ex-Apple Engineer), and I contributed as a Full Stack Developer and Designer.<br/><br/>This project was presented at Brunel University, and I created and presented the project’s pitch deck to an audience of 100+ people.<br/><br/>It was built with <span>Node.js</span> & <span>React.js (Material UI)</span> and deployed to Heroku.",
+        description: "MiniDesk is a web application that lets users manage bookmarks and boost their productivity. Users can also use it as a browser extension with handy widgets.<br/><br/>This project was supervised by Alex Kuhn (ex-Apple Engineer), and I contributed as a Full Stack Developer and Designer.<br/><br/>This project was presented at Brunel University, and I created and presented the project’s pitch deck to an audience of 100+ people.<br/><br/>It was built with <span>Express.js</span> & <span>React.js (Material UI)</span> and deployed to Heroku.",
         responsibilities: `I was mainly responsible for system architecture and user interface design.
                        It was built with GatsbyJS & Material UI and deployed to Heroku.`,
         links: {

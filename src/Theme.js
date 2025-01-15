@@ -2,6 +2,7 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 const darkTheme = {
   background: '#191818',
+  bgContact: '#191818',
   secondaryBackground: '#0e0e0e',
   heading: '#343a40',
   text: '#495057',
@@ -11,6 +12,8 @@ const darkTheme = {
   face_color_hover: '#f2994a',
   primary_color: '#5a2de4',
   skill_color: '#2d2d2d',
+  border: '#2d2d2d',
+  contactInput: '#2d2d2d',
 };
 
 const lightTheme = {
@@ -23,7 +26,10 @@ const lightTheme = {
   text: '#444444',
   face_color: '#f2f2f2',
   face_color_hover: '#f2994a',
-  primary_color: '#5a2de4'
+  primary_color: '#5a2de4',
+  border:'#d3d6e7',
+  bgContact: '#f7f8fe',
+  contactInput:'#fff'
 };
 
 export const themes = { darkTheme, lightTheme };

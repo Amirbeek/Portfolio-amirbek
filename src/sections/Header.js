@@ -19,7 +19,6 @@ const NavbarContainer = styled.div`
 const StyledAppBar = styled(AppBar)`
     background: ${(props) => props.theme.background}!important;
     box-shadow: none !important;
-    transition: 0.3s ease-in-out!important;
 `;
 
 const Logo = styled(Link)`
