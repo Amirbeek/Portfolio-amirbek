@@ -72,7 +72,7 @@ const About = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <img src={require('../images/avatar.png')} alt="Amirbek's avatar" />
+                    <img src={require('../images/sticker2.webp')} alt="Amirbek's avatar" />
                 </FaceImg>
                 <motion.h1
                     initial={{ opacity: 0, x: -50 }}
