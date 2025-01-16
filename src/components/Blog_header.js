@@ -13,6 +13,13 @@ const ArrowBack = styled.span`
     height: 100px;
 
 `
+const  BoxWrapper = styled(Box)`
+    margin-top: 6rem;
+    padding-right: 2rem;
+    @media only screen and (max-width: 500px) {
+        padding-right: 0;
+    }
+`
 const Styles = styled.div`
     .picked{
         font-weight: bold;
@@ -90,9 +97,9 @@ function Blog_header({title, type, date, image, children}) {
                         <img src={image} style={{width:"95%"}}/>
                     </Box>
                     <Styles>
-                        <Box sx={{marginTop: 5, paddingRight: 6,}}>
+                        <BoxWrapper>
                             {children}
-                        </Box>
+                        </BoxWrapper>
                     </Styles>
                 </Grid>
 
