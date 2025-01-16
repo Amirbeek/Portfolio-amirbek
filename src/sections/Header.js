@@ -122,7 +122,7 @@ const Header = ({ toggleTheme, theme }) => {
 
                                 <MenuItem onClick={handleMenuClose}>
                                     <a
-                                        href={require('../portfolio/Amirbek.pdf')}
+                                        href={require('../portfolio/Amirbek-Shomurodov-CV.pdf')}
                                         download
                                         style={{textDecoration: 'none', color: 'inherit'}}
                                     >

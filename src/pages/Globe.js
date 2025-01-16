@@ -25,7 +25,7 @@ pointLight.position.set(-400, 500, 200);`;
             <Blog_header
                 type={'Development'}
                 title={'Flight data visualization on a globe, inspired by Github\'s homepage'}
-                date={'February 01, 2021'}
+                date={'December 29, 2024'}
                 image={'./images/GitHub_Globe1.png'}
             >
 

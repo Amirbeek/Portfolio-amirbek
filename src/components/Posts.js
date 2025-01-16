@@ -10,7 +10,7 @@ function Posts() {
                 <div className="col-12 col-md-4">
                     <Cards image={'./images/Tint.png'}
                            title={'Image color classifier web application inspired by Figma Image Color Picker'}
-                           date={'January 10, 2025'}
+                           date={'December 20, 2024'}
                            ProjectType={'Development'}
                            Url={'/tintthrove'}
                     />
@@ -18,7 +18,7 @@ function Posts() {
                 <div className="col-12 col-md-4">
                     <Cards image={'./images/Thumbnail.png'}
                            title={'Discovering ThreePage.js. How and why this blog was built.'}
-                           date={'February 9, 2024'}
+                           date={'October 9, 2024'}
                            ProjectType={'Development'}
                            Url={'/threejs'}
                     />

@@ -50,6 +50,16 @@ const CInput = styled(TextField)`
         }
     }
 `
+const ContainerWrapper = styled(Container)`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 500px) {
+        height: 100%;
+        
+    }
+`
 
 
 
@@ -139,7 +149,7 @@ const ContactPage = () => {
 
     return (
       <div style={{}}>
-          <Container maxWidth="lg"  sx={{height: "75vh",display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <ContainerWrapper maxWidth="lg">
 
               <Grid container spacing={4} sx={{ mt: 4 }}>
                   <Grid item xs={12} md={5} >
@@ -240,7 +250,7 @@ const ContactPage = () => {
                       {snackbar.message}
                   </Alert>
               </Snackbar>
-          </Container>
+          </ContainerWrapper>
       </div>
     );
 };

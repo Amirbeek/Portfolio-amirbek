@@ -34,7 +34,7 @@ def get_colors(image, number_of_colors):
             <BlogHeader
                 type={'Development'}
                 title={'Image Color Classifier Web Application Inspired by Figma’s Image Color Picker'}
-                date={'February 01, 2021'}
+                date={'December 20, 2024'}
                 image={'./images/Tint2.png'}
             >
                 <Typography variant="h4" gutterBottom sx={{fontWeight: 'bold', paddingBottom: 'var(--space-sm)'}}>

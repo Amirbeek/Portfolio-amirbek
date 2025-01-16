@@ -7,7 +7,7 @@ export default function NavbarDialog({showDialog,handleDialogClose}) {
         <DialogTitle>Quick View - Resume</DialogTitle>
         <DialogContent>
             <iframe
-                src={require('../portfolio/Amirbek.pdf')}
+                src={require('../portfolio/Amirbek-Shomurodov-CV.pdf')}
                 style={{width: '100%', height: '500px', border: 'none'}}
                 title="Resume Quick View"
             />

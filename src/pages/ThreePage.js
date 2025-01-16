@@ -22,7 +22,7 @@ npm install --save three`;
         <Blog_header
             type={'Development'}
             title={'Discovering ThreePage.js. How and why this blog was built.'}
-            date={'February 01, 2021'}
+            date={'October 9, 2024'}
             image={'./images/Thumbnail.png'}
         >
             <Typography variant="h4" gutterBottom sx={{fontWeight: 'bold', paddingBottom: 'var(--space-sm)'}}>
