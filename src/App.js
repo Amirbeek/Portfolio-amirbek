@@ -11,6 +11,8 @@ import Blog from "./pages/Blog";
 import ThreePage from "./pages/ThreePage";
 import Tinthrove from "./pages/Tinthrove";
 import Globe from "./pages/Globe";
+import Albom from "./pages/Albom";
+import {CursorifyProvider, DefaultCursor} from '@cursorify/react'
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -52,6 +54,13 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
+            <CursorifyProvider
+                cursor={<DefaultCursor />}
+                opacity={1}
+                delay={1.5}
+                defaultCursorVisible={false}
+                breakpoint={997}
+            >
             <GlobalStyle />
             <Container>
                 <Router>
@@ -63,11 +72,13 @@ function App() {
                         <Route path={'/threejs'} element={<ThreePage />} />
                         <Route path={'/tintthrove'} element={<Tinthrove />} />
                         <Route path={'/gitglobe'} element={<Globe />} />
+                        <Route path={'/albom'} element={<Albom />} />
 
                     </Routes>
                     <Footer/>
                 </Router>
             </Container>
+            </CursorifyProvider>
         </ThemeProvider>
     );
 }

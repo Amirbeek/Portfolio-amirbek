@@ -5,6 +5,7 @@
   "homepage": "https://amirbekshomurodov.github.io",
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@cursorify/react": "^0.0.39",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.6",

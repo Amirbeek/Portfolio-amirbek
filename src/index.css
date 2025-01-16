@@ -1,9 +1,9 @@
 :root {
-    --baseline: 24px;                /* The base spacing unit */
-    --space-sm: calc(var(--baseline) / 2); /* Small space (12px) */
-    --space-md: var(--baseline);      /* Medium space (24px) */
-    --space-lg: calc(var(--baseline) * 2); /* Large space (48px) */
-    --space-xl: calc(var(--baseline) * 3); /* Extra large space (72px) */
+    --baseline: 24px;
+    --space-sm: calc(var(--baseline) / 2);
+    --space-md: var(--baseline);
+    --space-lg: calc(var(--baseline) * 2);
+    --space-xl: calc(var(--baseline) * 3);
 }
 
 .additionalImages {

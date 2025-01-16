@@ -24,14 +24,21 @@ function Posts() {
                     />
                 </div>
                 <div className="col-12 col-md-4">
+                    <Cards image={'./images/personal.jpg'}
+                           title={'My favorite Photo albums that I discovered in 2023'}
+                           date={'August 01, 2023'}
+                           ProjectType={'Personal'}
+                           Url={'/albom'}
+                    />
+                </div>
+                <div className="col-12 col-md-4">
                     <Cards image={'./images/GitHub_Globe1.png'}
                            title={'Flight data visualization on a globe, inspired by Github\'s homepage'}
-                           date={'February 01, 2021'}
+                           date={'December 29, 2024'}
                            ProjectType={'Development'}
                            Url={'/gitglobe'}
                     />
                 </div>
-
             </div>
         </div>
     );

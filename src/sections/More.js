@@ -37,7 +37,7 @@ function More() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                     <Card
-                        title="ThreePage.js Projects"
+                        title="Three.js Projects"
                         url={'https://www.behance.net/amirbekshomuro'}
                         description="Explore interactive 3D experiences! Dive into my ThreePage.js projects, showcasing cutting-edge graphics and animations. Click to discover the art of code"
                         background={Blog}

@@ -30,9 +30,18 @@ const Styles = styled.div`
 `
 const ContainerStyle = styled(Container)`
     margin-top: 7rem;
+    
     color:${props => props.theme.text_color_header};
+    @media only screen and (max-width: 500px) {
+       padding: 0!important;
+        margin-top: 3rem;
+    }
 `
-
+const Title = styled(Typography)`
+    @media only screen and (max-width: 500px) {
+        font-size: 1.5rem!important;
+    }
+`
 const ImageBIO = styled.img`
     width: 50px;
     height: 50px;
@@ -57,9 +66,9 @@ function Blog_header({title, type, date, image, children}) {
                     </ArrowBack>
                 </Grid>
                 <Grid item xs={10}>
-                    <Typography variant="h2" gutterBottom  sx={{ fontWeight: 'bold' }} >
+                    <Title variant="h2" gutterBottom  sx={{ fontWeight: 'bold' }} >
                         {title}
-                    </Typography>
+                    </Title>
                     <Typography gutterBottom  sx={{ fontWeight: 'bold' ,color:'#ff642e'}} >
                         {type}
                     </Typography>

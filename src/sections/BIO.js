@@ -36,7 +36,7 @@ const GitHubLink = styled.a`
     text-decoration: none;
     font-weight: bold;
     &:hover {
-        color: #551a8b;
+        text-decoration: underline;
     }
 `;
 const BIO = () => {
@@ -55,9 +55,7 @@ const BIO = () => {
                                     href="https://github.com/Amirbeek/Flight_System"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >Brunel Flight System</GitHubLink>
-                              This project, realized through the collective effort of talented peers, introduced an innovative flight booking experience. We integrated interactive maps and diverse retail options directly within the system, offering a unified solution that simplifies and enhances both travel and shopping for users.
-
+                                >Brunel Flight System</GitHubLink>. This project, realized through the collective effort of talented peers, introduced an innovative flight booking experience. We integrated interactive maps and diverse retail options directly within the system, offering a unified solution that simplifies and enhances both travel and shopping for users.
                         </Stylep>
                             <Stylep>
                                 I am currently pursuing an Bachelor degree in Computer Science with a specialization in AI and Data Science at Brunel University London

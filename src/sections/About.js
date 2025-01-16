@@ -41,23 +41,28 @@ const AboutContainer = styled.div`
 const FaceImg = styled(motion.div)`
     width: 100px;
     height: 100px;
-    transition:  0.3s ease-in-out;
-
-    background-color: ${props => props.theme.face_color};
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: ${(props) => props.theme.face_color};
     border-radius: 50%;
     overflow: hidden;
-
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
     }
 
     &:hover {
-        background-color: ${props => props.theme.face_color_hover};
-        transform: scale(1.1); 
+        background-color: ${(props) => props.theme.face_color_hover};
+        transform: scale(1.1);
+
+        img {
+            transform: scale(1.2);
+        }
     }
 `;
+
+
 
 const FaceColor = styled.span`
     color: ${props => props.theme.primary_color} !important;

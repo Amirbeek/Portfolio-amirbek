@@ -2,11 +2,9 @@ export const projectData = [
     {
         title: "MiniDesk",
         description: "MiniDesk is a web application that lets users manage bookmarks and boost their productivity. Users can also use it as a browser extension with handy widgets.<br/><br/>This project was supervised by Alex Kuhn (ex-Apple Engineer), and I contributed as a Full Stack Developer and Designer.<br/><br/>This project was presented at Brunel University, and I created and presented the project’s pitch deck to an audience of 100+ people.<br/><br/>It was built with <span>Express.js</span> & <span>React.js (Material UI)</span> and deployed to Heroku.",
-        responsibilities: `I was mainly responsible for system architecture and user interface design.
-                       It was built with GatsbyJS & Material UI and deployed to Heroku.`,
         links: {
             GitHubLink: "https://github.com/Amirbeek/MiniDesk",
-            DomainLink: "social_url",
+            DomainLink: "https://www.behance.net/gallery/216938563/Minidesk-Project-Overview",
             repoLink: "https://minidesk.me",
         },
 
@@ -19,10 +17,8 @@ export const projectData = [
     },{
         title: "Github Globe",
         description: "If you ever visited <a href='https://github.com/home'>Github's homepage</a>, you will notice a 3D globe that visualizes platform's current activity <br><br> I decided to recreate it with <span>ThreeJS</span> and make the project open-source. I built the Globe using Vasco Asturiano's <a href='https://github.com/vasturiano/three-globe?tab=readme-ov-file'>three-globe</a> as base, shaded the 3D scene to resemble a dreamy space environment and bundled everything with Webpack. <br> <br> Additionally, the Globe visualizes my flight history across the world from 2022 to 2023. And Deployed to <a href='https://vercel.com'>Vercel</a>",
-        responsibilities: `I was mainly responsible for system architecture and user interface design.
-                       It was built with GatsbyJS & Material UI and deployed to Heroku.`,
         links: {
-            GitHubLink: "https://github.com/Amirbeek/MiniDesk",
+            GitHubLink: "https://github.com/Amirbeek/github-globe-visualization",
             PagePath:'/gitglobe',
             repoLink: "https://github-globe-visualization.vercel.app",
         },
