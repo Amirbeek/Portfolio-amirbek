@@ -29,7 +29,7 @@ const Images = styled.img`
     border-radius: inherit; 
     z-index: -1;
     @media only screen and (max-width: 600px) {
-        height: 100%;
+        height: auto;
     }
 `;
 
