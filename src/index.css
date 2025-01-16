@@ -6,6 +6,11 @@
     --space-xl: calc(var(--baseline) * 3);
 }
 
+.media-none{
+    @media only screen and (max-width: 500px) {
+        display: none;
+    }
+}
 .additionalImages {
     border-radius: 0 0 30px 30px;
 }

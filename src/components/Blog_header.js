@@ -33,8 +33,8 @@ const ContainerStyle = styled(Container)`
     
     color:${props => props.theme.text_color_header};
     @media only screen and (max-width: 500px) {
-       padding: 0!important;
-        margin-top: 3rem;
+         padding: 2rem!important;
+         margin-top: 1rem!important;
     }
 `
 const Title = styled(Typography)`
@@ -58,14 +58,14 @@ function Blog_header({title, type, date, image, children}) {
     return (
         <ContainerStyle fixed sx={{marginTop:7}} >
             <Grid container spacing={2}>
-                <Grid item xs={2} >
+                <Grid item xs={2} className={'media-none'}>
                     <ArrowBack >
                         <Button  sx={{borderRadius:'100px!important'}} onClick={handleRedirect}>
                             <ArrowBackIcon sx={{cursor:'pointer', color:'#3a228a', width:50, height:50}}/>
                         </Button>
                     </ArrowBack>
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={12} md={10}>
                     <Title variant="h2" gutterBottom  sx={{ fontWeight: 'bold' }} >
                         {title}
                     </Title>
@@ -87,7 +87,7 @@ function Blog_header({title, type, date, image, children}) {
                         </div>
                     </Box>
                     <Box sx={{marginTop: 3}}>
-                        <img src={image} style={{width:"100%"}}/>
+                        <img src={image} style={{width:"95%"}}/>
                     </Box>
                     <Styles>
                         <Box sx={{marginTop: 5, paddingRight: 6,}}>
