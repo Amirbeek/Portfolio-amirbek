@@ -13,6 +13,14 @@ const Wrapper = styled.div`
     }
 `;
 
+const Wrapper1 = styled.div`
+    background-color: ${props => props.theme.skill_color};
+    height: 500px;
+    overflow: hidden;
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+    }
+`;
 const Images = styled.img`
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,6 +28,9 @@ const Images = styled.img`
     height: 500px;
     border-radius: inherit; 
     z-index: -1;
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+    }
 `;
 
 const StyledTitle = styled.h2`
@@ -74,9 +85,9 @@ const ProCard = ({ ...projectData }) => {
                 <>
                     {projectData.additional_images.map((image, index) => (
                         <Grid item xs={12} md={6} key={index}>
-                            <Wrapper className={index === 0 ? 'uni_img-left' : 'uni_img-right'}>
+                            <Wrapper1 className={index === 0 ? 'uni_img-left' : 'uni_img-right'}>
                                 <Images src={`${image}`} alt={`${projectData.title} preview`} />
-                            </Wrapper>
+                            </Wrapper1>
                         </Grid>
                     ))}
                 </>
