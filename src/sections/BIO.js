@@ -64,7 +64,7 @@ const BIO = () => {
                     </Grid>
                     <Grid item xs={12} md={6} sx={{display: 'flex',alignItems:'center', justifyContent: 'center'}}>
                         <ImageBIO
-                            src={require('../images/default_image.webp')}
+                            src={require('../images/Main.jpg')}
                             alt="Amirbek's picture"
                         />
                     </Grid>
