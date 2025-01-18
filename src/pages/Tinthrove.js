@@ -57,8 +57,7 @@ def get_colors(image, number_of_colors):
                     goal was to forge a design that stands out by incorporating vibrant animations and colors. For this
                     purpose, I integrated <span className="picked">Tailwind CSS</span> for its utility-first styling
                     and <span className="picked">GSAP</span> for smooth animations. The backend development was powered
-                    by robust frameworks like <span className="picked">Django</span> and <span
-                    className="picked">Flask</span>.
+                    by <span className="picked">Flask</span>.
                 </Typography>
 
                 <Typography variant="h4" gutterBottom
