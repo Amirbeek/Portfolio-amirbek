@@ -64,26 +64,10 @@ pointLight.position.set(-400, 500, 200);`;
                 <SyntaxHighlighter language="javascript" style={dracula}>
                     {codeString}
                 </SyntaxHighlighter>
-                <Box sx={{
-                    width: '100%',
-                    overflow: 'hidden',
-                    padding: 0,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <video
-                        preload="metadata"
-                        style={{width: '100%', height: '100%'}}
-                        loop
-                        autoPlay
-                        muted
-                    >
-                        <source src="/images/Git.mp4" type="video/mp4"/>
-                        Your browser does not support the video tag.
-                    </video>
-                </Box>
-                <Typography variant="h4" gutterBottom sx={{fontWeight: 'bold', paddingBottom: 'var(--space-sm)', marginTop: 'var(--space-lg)'}}>
+                <img src="./images/GitHubGlobe.gif" style={{width: '100%'}} alt="Figma Inspiration"/>
+
+                <Typography variant="h4" gutterBottom
+                            sx={{fontWeight: 'bold', paddingBottom: 'var(--space-sm)', marginTop: 'var(--space-lg)'}}>
                     Displaying my boarded flights from 2022-2023
                 </Typography>
                 <Typography variant="h6" gutterBottom sx={{ marginBottom: 'var(--space-md)' }}>

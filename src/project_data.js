@@ -9,12 +9,25 @@ export const projectData = [
         },
 
         highlight: "Feature Highlight",
-        highlightDesc: `If you visited <a href='https://minidesk.me' >GitHub's homepage</a> recently, you probably 
-                    saw their new, re-designed landing page... <span>hello</span>`,
         image: "./images/diagram.png",
         image_url:'./images/diagram.png',
         additional_images:['./images/minidesk.png',	'./images/minidesk1.png']
-    },{
+    },
+    {
+        title: "COVID 19 Detector Web Application",
+        description: "Developed under the supervision of <a href='https://www.brunel.ac.uk/people/weibo-liu1'>Dr. Weibo Liu</a>, this web application harnesses the power of a deep learning Convolutional Neural Network (CNN) to detect COVID-19 from medical images.<br> <br> The application is engineered using <span>Flask</span>, styled with <span>Tailwind CSS</span> for a clean and modern user interface, and deployed on <span>Heroku</span> for widespread accessibility. The robust model is securely stored and managed on <span>Amazon S3</span>, ensuring high performance and scalability.<br><br> This project exemplifies the integration of advanced computing technologies with critical healthcare applications." ,
+        links: {
+            GitHubLink: "https://github.com/Amirbeek/COVID-19-Detector-Web-Application",
+            PagePath:'/gitglobe',
+            repoLink: "https://github-globe-visualization.vercel.app",
+        },
+        highlight: "Feature Highlight",
+
+        image: "./images/1.png",
+        image_url:'./images/diagram.png',
+        additional_images:[]
+    },
+    {
         title: "Github Globe",
         description: "If you ever visited <a href='https://github.com/home'>Github's homepage</a>, you will notice a 3D globe that visualizes platform's current activity <br><br> I decided to recreate it with <span>ThreeJS</span> and make the project open-source. I built the Globe using Vasco Asturiano's <a href='https://github.com/vasturiano/three-globe?tab=readme-ov-file'>three-globe</a> as base, shaded the 3D scene to resemble a dreamy space environment and bundled everything with Webpack. <br> <br> Additionally, the Globe visualizes my flight history across the world from 2022 to 2023. And Deployed to <a href='https://vercel.com'>Vercel</a>",
         links: {
@@ -24,8 +37,6 @@ export const projectData = [
         },
 
         highlight: "Feature Highlight",
-        highlightDesc: `If you visited <a href='https://minidesk.me' >GitHub's homepage</a> recently, you probably 
-                    saw their new, re-designed landing page... <span>hello</span>`,
         image: "./images/GitHub_Globe1.png",
         image_url:'./images/diagram.png',
         additional_images:[]

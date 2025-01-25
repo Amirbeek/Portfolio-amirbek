@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import Box from "@mui/material/Box";
 import { Link as MuiLink } from '@mui/material';
 import styled from "styled-components";
 
@@ -85,26 +84,18 @@ def get_colors(image, number_of_colors):
                     switch to Heroku, leveraging the benefits offered through the GitHub Student Pack, which provides
                     additional resources for deployment.
                 </Typography>
-                <Box sx={{ width: '100%', overflow: 'hidden' }}>
-                    <video
-                        preload="metadata"
-                        style={{width:'100%',height:'100%'}}
-                        loop
-                        autoPlay
-                        muted
-                    >
-                        <source src="/images/tint.MOV" type="video/mp4"/>
-                        Your browser does not support the video tag.
-                    </video>
-                </Box>
+                <img src="./images/tint.gif" style={{width: '100%'}} alt="K-Means Algorithm Visualization"/>
+
                 <Typography
                     sx={{
                         marginY: 'var(--space-md)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        flexWrap: 'wrap'}}>
-                    <StyledLink href="https://tinttrove-66532836a19d.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                        flexWrap: 'wrap'
+                    }}>
+                    <StyledLink href="https://tinttrove-66532836a19d.herokuapp.com/" target="_blank"
+                                rel="noopener noreferrer">
                         Live Application
                     </StyledLink>
                     <StyledLink href="https://github.com/Amirbeek/TintTrove" target="_blank" rel="noopener noreferrer">

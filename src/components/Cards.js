@@ -2,23 +2,34 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
 const FunCard = styled(Card)`
     transition: 1s;
-    min-height: 285px;
+    height: 350px;  /* Set fixed height */
     background-color: ${props => props.theme.face_color};
     color: ${props => props.theme.text_color_header};
     cursor: pointer;
+
     .title-card {
         transition: 0.3s;
     }
+
     a {
         color: ${props => props.theme.text_color_header};
     }
+
     &:hover .title-card {
         color: ${props => props.theme.primary_color};
     }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        height: 360px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
 `;
+
 
 const Card_p = styled.div`
     color: ${props => props.theme.text_color_header}!important;
